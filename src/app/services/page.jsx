@@ -1,13 +1,274 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
+import Link from 'next/link';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import ScrollToTop from '@/components/ui/ScrollToTop';
 import Image from 'next/image';
-
 export default function ServicesPage() {
+  const [expandedCard, setExpandedCard] = useState(null);
+
+  const toggleCard = (index) => {
+    setExpandedCard(expandedCard === index ? null : index);
+  };
+
+  const services = [
+    {
+      icon: "/images/img_whitening.svg",
+      title: "Well Equipped Fracture & Trauma Care Unit",
+      description: "State-of-the-art emergency trauma care with advanced equipment for immediate fracture treatment and stabilization.",
+      additionalInfo: {
+        features: [
+          "24/7 emergency trauma services",
+          "Advanced imaging and diagnostic equipment",
+          "Immediate surgical intervention capabilities",
+          "Specialized trauma team with experienced orthopedic surgeons"
+        ],
+        benefits: "Quick response time, comprehensive care, and advanced treatment protocols ensure optimal recovery outcomes."
+      }
+    },
+    {
+      icon: "/images/img_tooth_insurance.svg",
+      title: "Advanced Operation Theatre Complex",
+      description: "Modern operation theatres with laminar air flow systems ensuring sterile environment for all surgical procedures.",
+      additionalInfo: {
+        features: [
+          "Laminar air flow technology",
+          "State-of-the-art surgical equipment",
+          "Digital monitoring systems",
+          "Infection control protocols"
+        ],
+        benefits: "Reduced infection risk, improved surgical outcomes, and enhanced patient safety during all procedures."
+      }
+    },
+    {
+      icon: "/images/img_implant.svg",
+      title: "Joint Replacement",
+      description: "Comprehensive joint replacement procedures for hips, knees, and shoulders using latest minimally invasive techniques.",
+      additionalInfo: {
+        features: [
+          "Hip, knee, and shoulder replacements",
+          "Minimally invasive surgical techniques",
+          "Computer-assisted surgery options",
+          "Comprehensive rehabilitation programs"
+        ],
+        benefits: "Faster recovery, reduced pain, improved mobility, and long-lasting results with modern implant technology."
+      }
+    },
+    {
+      icon: "/images/img_dentist.svg",
+      title: "Limb Lengthening & Deformity Correction",
+      description: "Advanced procedures for limb lengthening and correction of bone deformities using modern surgical techniques.",
+      additionalInfo: {
+        features: [
+          "Ilizarov and modern fixation systems",
+          "Gradual lengthening protocols",
+          "Deformity correction procedures",
+          "Pediatric and adult treatments"
+        ],
+        benefits: "Improved limb alignment, enhanced mobility, and restored function with minimal complications."
+      }
+    },
+    {
+      icon: "/images/img_icon.svg",
+      title: "Ilizarov Surgery",
+      description: "Specialized Ilizarov external fixation techniques for complex fractures and bone reconstruction procedures.",
+      additionalInfo: {
+        features: [
+          "External fixation systems",
+          "Complex fracture treatment",
+          "Bone reconstruction procedures",
+          "Post-surgical monitoring and adjustment"
+        ],
+        benefits: "Effective treatment for complex cases, gradual correction, and preservation of limb function."
+      }
+    },
+    {
+      icon: "/images/img_users.svg",
+      title: "Spine Surgery & Fracture Treatment",
+      description: "Comprehensive spinal care including minimally invasive spine surgery and advanced fracture treatment.",
+      additionalInfo: {
+        features: [
+          "Minimally invasive spine surgery",
+          "Spinal fusion procedures",
+          "Disc replacement surgery",
+          "Vertebral fracture treatment"
+        ],
+        benefits: "Reduced surgical trauma, faster recovery, improved spinal stability, and pain relief."
+      }
+    },
+    {
+      icon: "/images/img_whitening.svg",
+      title: "Pediatric Orthopedic Care",
+      description: "Specialized orthopedic care for children including growth-related disorders and congenital conditions.",
+      additionalInfo: {
+        features: [
+          "Growth disorder treatment",
+          "Congenital deformity correction",
+          "Pediatric trauma care",
+          "Developmental hip dysplasia treatment"
+        ],
+        benefits: "Specialized care for growing children, early intervention, and long-term developmental support."
+      }
+    },
+    {
+      icon: "/images/img_tooth_insurance.svg",
+      title: "Arthroscopic Surgery",
+      description: "Minimally invasive arthroscopic procedures for joint problems with faster recovery and reduced scarring.",
+      additionalInfo: {
+        features: [
+          "Knee and shoulder arthroscopy",
+          "Minimally invasive techniques",
+          "Same-day surgery options",
+          "Advanced arthroscopic equipment"
+        ],
+        benefits: "Smaller incisions, reduced pain, faster recovery, and minimal scarring compared to open surgery."
+      }
+    },
+    {
+      icon: "/images/img_implant.svg",
+      title: "Arthritis & Osteoporosis Management",
+      description: "Comprehensive management of arthritis and osteoporosis with medication, therapy, and lifestyle guidance.",
+      additionalInfo: {
+        features: [
+          "Medication management",
+          "Physical therapy programs",
+          "Lifestyle counseling",
+          "Bone density monitoring"
+        ],
+        benefits: "Improved joint function, reduced pain, prevention of further bone loss, and enhanced quality of life."
+      }
+    },
+    {
+      icon: "/images/img_dentist.svg",
+      title: "Digital X-ray & Pregnancy Care",
+      description: "Advanced digital imaging and comprehensive antenatal and postnatal care for expectant mothers.",
+      additionalInfo: {
+        features: [
+          "Digital X-ray systems",
+          "Antenatal checkups",
+          "Postnatal care",
+          "Pregnancy monitoring"
+        ],
+        benefits: "Reduced radiation exposure, immediate results, comprehensive maternal care, and healthy pregnancy outcomes."
+      }
+    },
+    {
+      icon: "/images/img_users.svg",
+      title: "Air-conditioned Labor Room",
+      description: "Comfortable, modern labor rooms with climate control for safe and comfortable delivery experience.",
+      additionalInfo: {
+        features: [
+          "Climate-controlled environment",
+          "Modern delivery equipment",
+          "Comfortable patient amenities",
+          "24/7 nursing support"
+        ],
+        benefits: "Enhanced comfort during labor, reduced stress, improved delivery outcomes, and better patient experience."
+      }
+    },
+    {
+      icon: "/images/img_whitening.svg",
+      title: "Cesarean & Surgical Procedures",
+      description: "Expert cesarean delivery and gynecological surgical procedures with advanced surgical techniques.",
+      additionalInfo: {
+        features: [
+          "Cesarean delivery",
+          "Gynecological surgeries",
+          "Laparoscopic procedures",
+          "Post-operative care"
+        ],
+        benefits: "Safe delivery options, minimal invasive techniques, faster recovery, and comprehensive surgical care."
+      }
+    },
+    {
+      icon: "/images/img_tooth_insurance.svg",
+      title: "Infertility Prevention & Treatment",
+      description: "Comprehensive fertility services including diagnosis, treatment, and counseling for reproductive health.",
+      additionalInfo: {
+        features: [
+          "Fertility assessment",
+          "Treatment protocols",
+          "Counseling services",
+          "Reproductive health guidance"
+        ],
+        benefits: "Improved conception chances, personalized treatment plans, emotional support, and comprehensive care."
+      }
+    },
+    {
+      icon: "/images/img_implant.svg",
+      title: "Ayurveda Center",
+      description: "Traditional Ayurvedic treatments integrated with modern medicine for holistic healing approach.",
+      additionalInfo: {
+        features: [
+          "Traditional Ayurvedic treatments",
+          "Herbal medicine",
+          "Panchakarma therapies",
+          "Integrated healthcare approach"
+        ],
+        benefits: "Holistic healing, natural treatment options, improved overall wellness, and complementary care."
+      }
+    },
+    {
+      icon: "/images/img_dentist.svg",
+      title: "Uterine Fibroid Surgery",
+      description: "Advanced surgical treatment for uterine fibroids including minimally invasive laparoscopic procedures.",
+      additionalInfo: {
+        features: [
+          "Laparoscopic fibroid removal",
+          "Hysteroscopic procedures",
+          "Minimally invasive techniques",
+          "Fertility preservation options"
+        ],
+        benefits: "Reduced surgical trauma, faster recovery, preserved fertility, and effective symptom relief."
+      }
+    },
+    {
+      icon: "/images/img_icon.svg",
+      title: "Sonography Center",
+      description: "State-of-the-art ultrasound imaging for accurate diagnosis and monitoring of various conditions.",
+      additionalInfo: {
+        features: [
+          "High-resolution ultrasound",
+          "3D/4D imaging capabilities",
+          "Doppler studies",
+          "Immediate reporting"
+        ],
+        benefits: "Accurate diagnosis, non-invasive imaging, real-time results, and comprehensive monitoring."
+      }
+    },
+    {
+      icon: "/images/img_users.svg",
+      title: "Women's Disease Diagnosis",
+      description: "Comprehensive diagnosis and guidance for various women's health conditions and disorders.",
+      additionalInfo: {
+        features: [
+          "Comprehensive health screenings",
+          "Preventive care programs",
+          "Diagnostic testing",
+          "Health education and counseling"
+        ],
+        benefits: "Early detection, preventive care, personalized treatment plans, and improved women's health outcomes."
+      }
+    },
+    {
+      icon: "/images/img_whitening.svg",
+      title: "Sexual Problem Treatment",
+      description: "Confidential and professional treatment for sexual health issues with expert counseling and care.",
+      additionalInfo: {
+        features: [
+          "Confidential consultations",
+          "Professional counseling",
+          "Medical treatment options",
+          "Relationship therapy"
+        ],
+        benefits: "Improved sexual health, enhanced relationships, professional support, and confidential care."
+      }
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -19,10 +280,10 @@ export default function ServicesPage() {
           <div className="max-w-2xl">
             <p className="text-xl font-semibold mb-4 text-accent">Our Services</p>
             <h1 className="text-7xl font-semibold mb-6 leading-tight">
-              Comprehensive Orthopedic Care
+              Comprehensive Orthopaedic & Gynecology Care
             </h1>
             <p className="text-lg text-accent-light mb-8 leading-relaxed">
-              From preventive care to advanced treatments, we offer a full range of orthopedic services to keep you mobile and pain-free.
+              From preventive care to advanced treatments, Cortex Hospital offers a full range of orthopaedic and gynecological services to support your health and well-being.
             </p>
             <Button variant="secondary" size="large">
               Make Appointment
@@ -46,47 +307,18 @@ export default function ServicesPage() {
           <div className="text-center mb-16">
             <p className="text-accent font-medium mb-4">Our Specialties</p>
             <h2 className="text-5xl font-semibold text-primary mb-6 leading-tight">
-              What We Offer
+              Cortex Hospital Services
             </h2>
             <p className="text-secondary-dark text-lg max-w-3xl mx-auto">
-              At Cortex Hospital, we provide comprehensive orthopedic services using the latest technology and techniques to ensure the best outcomes for our patients.
+              At Cortex Hospital, we provide comprehensive orthopaedic and gynecological services using the latest technology and techniques to ensure the best outcomes for our patients.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {[
-              {
-                icon: "/images/img_whitening.svg",
-                title: "Teeth Whitening",
-                description: "Professional whitening treatments that brighten your smile and remove years of stains safely and effectively."
-              },
-              {
-                icon: "/images/img_tooth_insurance.svg",
-                title: "Preventive Care",
-                description: "Regular checkups, cleanings, and evaluations to prevent dental issues before they start."
-              },
-              {
-                icon: "/images/img_implant.svg",
-                title: "Dental Implants",
-                description: "Permanent tooth replacements that look, feel and function like natural teeth for a complete smile."
-              },
-              {
-                icon: "/images/img_dentist.svg",
-                title: "Cosmetic Dentistry",
-                description: "Procedures to improve the appearance of your smile, including veneers, bonding, and smile makeovers."
-              },
-              {
-                icon: "/images/img_icon.svg",
-                title: "Orthodontics",
-                description: "Traditional braces and clear aligners to straighten teeth and correct bite issues for all ages."
-              },
-              {
-                icon: "/images/img_users.svg",
-                title: "Family Dentistry",
-                description: "Comprehensive care for the whole family, from children's first visit to senior dental health needs."
-              }
-            ].map((service, index) => (
-              <Card key={index} className="p-8 hover:shadow-xl transition-shadow duration-300">
+            {services.map((service, index) => (
+              <Card key={index} className={`p-8 hover:shadow-xl transition-all duration-300 ${
+                expandedCard === index ? 'md:col-span-3 lg:col-span-3' : ''
+              }`}>
                 <div className="bg-[#0B1F44] p-6 rounded-lg w-16 h-16 mb-6 flex items-center justify-center">
                   <Image src={service.icon} alt={service.title} width={32} height={32} />
                 </div>
@@ -94,10 +326,45 @@ export default function ServicesPage() {
                 <p className="text-gray-500 leading-relaxed mb-6">
                   {service.description}
                 </p>
-                <a href="#" className="text-[#D4AF37] font-medium flex items-center">
-                  Learn More
-                  <Image src="/images/img_arrowright.svg" alt="Arrow" width={16} height={16} className="ml-2" />
-                </a>
+                
+                {/* Expanded content */}
+                {expandedCard === index && (
+                  <div className="border-t pt-6 mt-6 transition-all duration-300 ease-in-out">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Features:</h4>
+                    <ul className="space-y-2 mb-6">
+                      {service.additionalInfo.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start">
+                          <div className="bg-[#D4AF37] p-1 rounded-full mr-3 mt-1 flex-shrink-0">
+                            <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                            </svg>
+                          </div>
+                          <span className="text-gray-600 text-sm">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="bg-gray-50 p-4 rounded-lg mb-6">
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Benefits:</h4>
+                      <p className="text-gray-600 text-sm">{service.additionalInfo.benefits}</p>
+                    </div>
+                  </div>
+                )}
+                
+                <button 
+                  onClick={() => toggleCard(index)}
+                  className="text-[#D4AF37] font-medium flex items-center hover:text-[#B8941F] transition-colors"
+                >
+                  {expandedCard === index ? 'Show Less' : 'Learn More'}
+                  <Image 
+                    src="/images/img_arrowright.svg" 
+                    alt="Arrow" 
+                    width={16} 
+                    height={16} 
+                    className={`ml-2 transition-transform duration-200 ${
+                      expandedCard === index ? 'rotate-90' : ''
+                    }`} 
+                  />
+                </button>
               </Card>
             ))}
           </div>
@@ -105,229 +372,140 @@ export default function ServicesPage() {
       </section>
       
       {/* Featured Service */}
+      
+      {/* Pricing Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-[#0B1F44] font-medium mb-4">Featured Service</p>
-              <h2 className="text-5xl font-semibold text-gray-900 mb-6 leading-tight">
-                Advanced Teeth Whitening
-              </h2>
-              <p className="text-gray-500 text-lg mb-6 leading-relaxed">
-                Our professional teeth whitening treatments can brighten your smile by several shades in just one visit. We use advanced technology that is gentle on teeth while providing dramatic results.
+          <div className="text-center mb-16">
+            <p className="text-accent font-medium mb-4">Pricing & Charges</p>
+            <h2 className="text-5xl font-semibold text-primary mb-6 leading-tight">
+              Transparent Pricing Structure
+            </h2>
+            <p className="text-secondary-dark text-lg max-w-3xl mx-auto">
+              At Cortex Hospital, we believe in transparent pricing. Below are our standard charges for various services and procedures.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Basic Services */}
+            <Card className="p-8 hover:shadow-xl transition-all duration-300">
+              <div className="bg-[#0B1F44] p-6 rounded-lg w-16 h-16 mb-6 flex items-center justify-center">
+                <Image src="/images/img_users.svg" alt="Basic Services" width={32} height={32} />
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Basic Services</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                  <span className="text-gray-600">Registration Fee</span>
+                  <span className="font-semibold text-gray-900">₹ 400</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                  <span className="text-gray-600">Consultation Fee</span>
+                  <span className="font-semibold text-gray-900">₹ 700</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                  <span className="text-gray-600">Assistant Doctor Visit</span>
+                  <span className="font-semibold text-gray-900">₹ 500</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                  <span className="text-gray-600">Special Visit</span>
+                  <span className="font-semibold text-gray-900">₹ 9,000</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                  <span className="text-gray-600">Discharge Charges</span>
+                  <span className="font-semibold text-gray-900">₹ 700 - 1,000</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                  <span className="text-gray-600">X-ray Services</span>
+                  <span className="font-semibold text-gray-900">₹ 500 - 1,000+</span>
+                </div>
+                
+               
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-gray-600 text-sm">*Charges vary by test type</span>
+                  <Link href="/contact" className="text-accent font-medium text-sm hover:text-[#B8941F] transition-colors">
+                    Contact for details
+                  </Link>
+                </div>
+              </div>
+            </Card>
+
+            {/* Ward & Nursing */}
+            <Card className="p-8 hover:shadow-xl transition-all duration-300">
+              <div className="bg-[#0B1F44] p-6 rounded-lg w-16 h-16 mb-6 flex items-center justify-center">
+                <Image src="/images/img_whitening.svg" alt="Ward Services" width={32} height={32} />
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Ward & Nursing</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                  <span className="text-gray-600">Daily Admission (Non-AC)</span>
+                  <span className="font-semibold text-gray-900">₹ 2,001</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                  <span className="text-gray-600">Daily Admission (AC)</span>
+                  <span className="font-semibold text-gray-900">₹ 2,901</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                  <span className="text-gray-600">Nursing Charges (Per Day)</span>
+                  <span className="font-semibold text-gray-900">₹ 800</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                  <span className="text-gray-600">Dressing & Injection</span>
+                  <span className="font-semibold text-gray-900">₹ 700</span>
+                </div>
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-gray-600">Multipara Monitor</span>
+                  <span className="font-semibold text-gray-900">₹ 700</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                  <span className="text-gray-600">Sonography</span>
+                  <span className="font-semibold text-gray-900">₹ 500 - 1,000+</span>
+                </div>
+              </div>
+            </Card>
+
+            {/* Surgery & Procedures */}
+            <Card className="p-8 hover:shadow-xl transition-all duration-300">
+              <div className="bg-[#0B1F44] p-6 rounded-lg w-16 h-16 mb-6 flex items-center justify-center">
+                <Image src="/images/img_implant.svg" alt="Surgery Services" width={32} height={32} />
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Surgery & Procedures</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                  <span className="text-gray-600">Surgery Charges</span>
+                  <span className="font-semibold text-gray-900">₹ 9,000+</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                  <span className="text-gray-600">Anesthesia Charges</span>
+                  <span className="font-semibold text-gray-900">₹ 9,000+</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                  <span className="text-gray-600">Anesthesia Assistant</span>
+                  <span className="font-semibold text-gray-900">₹ 2,000</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                  <span className="text-gray-600">Major Surgery Assistant</span>
+                  <span className="font-semibold text-gray-900">₹ 2,000</span>
+                </div>
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-gray-600 text-sm">*Charges vary as per surgery type</span>
+                  <Link href="/contact" className="text-accent font-medium text-sm hover:text-[#B8941F] transition-colors">
+                    Contact for details
+                  </Link>
+                </div>
+              </div>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 max-w-2xl mx-auto">
+              <h4 className="text-lg font-semibold text-blue-900 mb-2">Important Note</h4>
+              <p className="text-blue-800 text-sm">
+                All charges are subject to change without prior notice. For detailed pricing information and package deals, please contact our billing department or visit our hospital.
               </p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start">
-                  <div className="bg-[#0B1F44] p-1 rounded-full mr-3 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                  </div>
-                  <span className="text-gray-500">Professional-strength whitening agents</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="bg-[#0B1F44] p-1 rounded-full mr-3 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                  </div>
-                  <span className="text-gray-500">Customized treatment plans</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="bg-[#0B1F44] p-1 rounded-full mr-3 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                  </div>
-                  <span className="text-gray-500">Quick, noticeable results</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="bg-[#0B1F44] p-1 rounded-full mr-3 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                  </div>
-                  <span className="text-gray-500">Safe for teeth and gums</span>
-                </li>
-              </ul>
-              <Button variant="secondary" size="large">
-                Learn More
-              </Button>
-            </div>
-            <div className="relative">
-              <div className="bg-gray-900 rounded-lg h-96 relative overflow-hidden">
-                {/* Image placeholder */}
-                <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                  [Teeth Whitening Treatment Image]
-                </div>
-                <Image 
-                  src="/images/img_shape_cyan_500.svg" 
-                  alt="Decorative shape" 
-                  width={200}
-                  height={100}
-                  className="absolute bottom-0 left-0"
-                />
-              </div>
             </div>
           </div>
         </div>
       </section>
-      
-      {/* Service Process */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <p className="text-[#0B1F44] font-medium mb-4">Our Process</p>
-            <h2 className="text-5xl font-semibold text-gray-900 mb-6 leading-tight">
-              How We Work
-            </h2>
-            <p className="text-gray-500 text-lg max-w-3xl mx-auto">
-              We follow a systematic approach to ensure we meet your dental needs effectively and efficiently.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              {
-                icon: "/images/img_scedule.svg",
-                title: "Consultation",
-                description: "We start with a thorough consultation to understand your dental history and goals."
-              },
-              {
-                icon: "/images/img_dentist.svg",
-                title: "Examination",
-                description: "Our dentists perform a comprehensive examination and discuss treatment options."
-              },
-              {
-                icon: "/images/img_tooth_insurance.svg",
-                title: "Treatment",
-                description: "We provide personalized treatment with a focus on comfort and effectiveness."
-              },
-              {
-                icon: "/images/img_thumbsup.svg",
-                title: "Follow-Up",
-                description: "We ensure your continued dental health with regular check-ups and maintenance."
-              }
-            ].map((step, index) => (
-              <div key={index} className="text-center relative">
-                <div className="bg-[#0B1F44] p-6 rounded-lg w-20 h-20 mx-auto mb-6 flex items-center justify-center relative z-10">
-                  <Image src={step.icon} alt={step.title} width={40} height={40} />
-                  <div className="absolute -top-4 -right-4 w-8 h-8 rounded-full bg-[#D4AF37] text-white flex items-center justify-center font-semibold">
-                    {index + 1}
-                  </div>
-                </div>
-                {index < 3 && (
-                  <div className="hidden md:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-[#D4AF37]"></div>
-                )}
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">{step.title}</h3>
-                <p className="text-gray-500 leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      
-      {/* Pricing */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <p className="text-[#0B1F44] font-medium mb-4">Pricing</p>
-            <h2 className="text-5xl font-semibold text-gray-900 mb-6 leading-tight">
-              Transparent Fee Structure
-            </h2>
-            <p className="text-gray-500 text-lg max-w-3xl mx-auto">
-              We believe in transparency when it comes to our pricing. Here are our starting rates for common treatments.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="p-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">General Dentistry</h3>
-              <ul className="space-y-4 mb-8">
-                <li className="flex justify-between">
-                  <span className="text-gray-500">Regular Checkup</span>
-                  <span className="font-semibold text-gray-900">$75</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-gray-500">Dental Cleaning</span>
-                  <span className="font-semibold text-gray-900">$100</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-gray-500">Filling (per tooth)</span>
-                  <span className="font-semibold text-gray-900">$150</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-gray-500">Root Canal</span>
-                  <span className="font-semibold text-gray-900">$700</span>
-                </li>
-              </ul>
-              <Button variant="outline" size="medium" className="w-full text-[#D4AF37]">
-                Book Now
-              </Button>
-            </Card>
-            
-            <Card className="p-8 border-2 border-[#0B1F44] shadow-lg">
-              <div className="absolute top-0 right-0 bg-[#0B1F44] text-white py-1 px-4 text-sm font-medium rounded-bl-lg">
-                Popular
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">Cosmetic Services</h3>
-              <ul className="space-y-4 mb-8">
-                <li className="flex justify-between">
-                  <span className="text-gray-500">Teeth Whitening</span>
-                  <span className="font-semibold text-gray-900">$350</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-gray-500">Veneers (per tooth)</span>
-                  <span className="font-semibold text-gray-900">$950</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-gray-500">Bonding (per tooth)</span>
-                  <span className="font-semibold text-gray-900">$300</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-gray-500">Smile Makeover</span>
-                  <span className="font-semibold text-gray-900">$2,500+</span>
-                </li>
-              </ul>
-              <Button variant="primary" size="medium" className="w-full text-[#D4AF37]">
-                Book Now
-              </Button>
-            </Card>
-            
-            <Card className="p-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">Specialty Treatments</h3>
-              <ul className="space-y-4 mb-8">
-                <li className="flex justify-between">
-                  <span className="text-gray-500">Dental Implant</span>
-                  <span className="font-semibold text-gray-900">$3,000</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-gray-500">Orthodontics</span>
-                  <span className="font-semibold text-gray-900">$5,000+</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-gray-500">Wisdom Tooth Extraction</span>
-                  <span className="font-semibold text-gray-900">$450</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-gray-500">Periodontal Treatment</span>
-                  <span className="font-semibold text-gray-900">$800+</span>
-                </li>
-              </ul>
-              <Button variant="outline" size="medium" className="w-full text-[#D4AF37]">
-                Book Now
-              </Button>
-            </Card>
-          </div>
-          
-          <div className="text-center mt-12 text-gray-500">
-            <p>* Pricing may vary based on individual needs and complexity. Contact us for a personalized quote.</p>
-          </div>
-        </div>
-      </section>
-      
       
       <Footer />
     </div>

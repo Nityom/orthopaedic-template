@@ -5,6 +5,7 @@ import Footer from '@/components/common/Footer';
 import HeroSection from '@/components/common/HeroSection';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
+import Link from 'next/link';
 import ScrollToTop from '@/components/ui/ScrollToTop';
 import Image from 'next/image';
 export default function HomePage() {
@@ -16,14 +17,14 @@ export default function HomePage() {
       {/* About Section */}
       <section className="py-6 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-12">
+          <div className="flex flex-col lg:flex-row items-stretch gap-6 lg:gap-12">
             <div className="w-full lg:w-1/2 order-1 lg:order-2 mb-6 lg:mb-0">
               <p className="text-accent font-medium mb-3">About Us</p>
               <h2 className="text-2xl sm:text-3xl lg:text-5xl font-semibold text-primary mb-3 sm:mb-5 leading-tight">
-                Your Trusted Partner For Orthopedic Care
+                Cortex Hospital - Excellence in Orthopaedic & Gynecology Care
               </h2>
               <p className="text-secondary-dark text-sm sm:text-base mb-5 leading-relaxed">
-                We provide comprehensive orthopedic care with state-of-the-art facilities and experienced specialists. Our team is dedicated to helping you regain mobility and live pain-free.
+                At Cortex Hospital, we specialize in providing world-class orthopaedic and gynecological care. Our multidisciplinary team combines advanced medical expertise with compassionate care to serve women's health needs and musculoskeletal wellness.
               </p>
               <div className="grid grid-cols-1 gap-4 mb-6">
                 <div className="flex items-start gap-3">
@@ -31,8 +32,8 @@ export default function HomePage() {
                     <Image src="/images/img_users.svg" alt="Expert orthopedists" width={20} height={20} className="invert" />
                   </div>
                   <div>
-                    <h3 className="text-base sm:text-lg font-semibold text-primary mb-1">Expert Orthopedists</h3>
-                    <p className="text-secondary-dark text-xs sm:text-sm">Specialized care from experienced orthopedic surgeons.</p>
+                    <h3 className="text-base sm:text-lg font-semibold text-primary mb-1">Expert Orthopaedic Surgeons</h3>
+                    <p className="text-secondary-dark text-xs sm:text-sm">Specialized care for bones, joints, and spine conditions.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -40,38 +41,30 @@ export default function HomePage() {
                     <Image src="/images/img_thumbsup.svg" alt="Advanced Treatment" width={20} height={20} className="invert" />
                   </div>
                   <div>
-                    <h3 className="text-base sm:text-lg font-semibold text-primary mb-1">Advanced Treatment</h3>
-                    <p className="text-secondary-dark text-xs sm:text-sm">Latest technology and minimally invasive procedures.</p>
+                    <h3 className="text-base sm:text-lg font-semibold text-primary mb-1">Comprehensive Gynecology</h3>
+                    <p className="text-secondary-dark text-xs sm:text-sm">Complete women's health services and reproductive care.</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="hidden lg:block w-full lg:w-1/2 order-2 lg:order-1">
-              <div className="bg-primary rounded-lg h-40 sm:h-56 lg:h-80 relative overflow-hidden">
-              
+ 
+            <div className="w-full lg:w-1/2 order-2 lg:order-1">
+              <div className="bg-primary rounded-lg h-80 sm:h-96 lg:h-full min-h-96 relative overflow-hidden">
+                <Image 
+                  src="/images/hospitalImage.jpg" 
+                  alt="Cortex Hospital - Modern medical facility" 
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
+
           </div>
         </div>
       </section>
       {/* Video Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-primary relative">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="relative">
-            <Image 
-              src="/images/img_video_box.svg" 
-              alt="Video background" 
-              width={1140}
-              height={600}
-              className="w-full rounded-lg"
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <button className="bg-white rounded-full p-6 shadow-lg hover:scale-105 transition-transform">
-                <div className="w-0 h-0 border-l-[20px] border-l-primary border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent ml-1"></div>
-              </button>
-            </div>
-          </div>
-        </div>
+      <section className="py-12 sm:py-16 lg:py-1 bg-primary relative">
+        
         {/* Statistics */}
         <div className="bg-primary py-16 mt-16">
           <div className="max-w-7xl mx-auto px-4">
@@ -99,66 +92,66 @@ export default function HomePage() {
         </div>
       </section>
       {/* Services Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-accent font-medium mb-4">Our Service</p>
-              <h2 className="text-5xl font-semibold text-gray-900 mb-6 leading-tight">
-                 Specialized Orthodontic Treatment
-              </h2>
-              <p className="text-gray-500 text-lg mb-8 leading-relaxed">
-               We offer advanced orthodontic solutions including braces, clear aligners, and retainers to correct misaligned teeth and jaw issues—improving function, appearance, and long-term oral health.
-              </p>
-              {/* <div className="bg-gray-900 rounded-lg h-80 relative">
-          
-              </div> */}
-            </div>
-            <div className="space-y-8">
-              <div className="flex items-start gap-6">
-                <div className="bg-[#D4AF37] p-6 rounded-lg">
-                  <Image src="/images/img_joint.svg" alt="Joint Replacement" width={44} height={44} />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">Joint Replacement</h3>
-                  <p className="text-gray-500 leading-relaxed">
-                    State-of-the-art joint replacement procedures for knees, hips, and shoulders.
-                  </p>
-                </div>
-              </div>
-              <hr className="border-gray-300" />
-              <div className="flex items-start gap-6">
-                <div className="bg-[#D4AF37] p-6 rounded-lg">
-                  <Image src="/images/img_spine.svg" alt="Spine Surgery" width={44} height={44} />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">Spine Surgery</h3>
-                  <p className="text-gray-500 leading-relaxed">
-                    Advanced spinal procedures and minimally invasive techniques.
-                  </p>
-                </div>
-              </div>
-              <hr className="border-gray-300" />
-              <div className="flex items-start gap-6">
-                <div className="bg-[#D4AF37] p-6 rounded-lg">
-                  <Image src="/images/img_sports.svg" alt="Sports Medicine" width={44} height={44} />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">Sports Medicine</h3>
-                  <p className="text-gray-500 leading-relaxed">
-                    Specialized care for sports-related injuries and rehabilitation.
-                  </p>
-                </div>
-              </div>
-              <div className="pt-4">
-                <Button variant="primary" size="large" className='text-[#D4AF37]'>
-                  All Services
-                </Button>
-              </div>
-            </div>
+  <section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p className="text-accent font-medium mb-4">Our Services</p>
+        <h2 className="text-5xl font-semibold text-gray-900 mb-6 leading-tight">
+          Comprehensive Orthopaedic & Gynecological Care
+        </h2>
+        <p className="text-gray-500 text-lg mb-8 leading-relaxed">
+          At Cortex Hospital, we bring together expert orthopaedic and gynecological care under one roof. From joint replacements and trauma surgery to maternity and fertility care, we provide holistic and personalized health solutions.
+        </p>
+      </div>
+      <div className="space-y-8">
+        <div className="flex items-start gap-6">
+          <div className="bg-[#D4AF37] p-6 rounded-lg">
+            <Image src="/images/img_joint.svg" alt="Joint Replacement" width={44} height={44} />
+          </div>
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-3">Joint Replacement & Spine Surgery</h3>
+            <p className="text-gray-500 leading-relaxed">
+              Expert procedures for joint replacements and spinal care including fracture treatments and deformity correction.
+            </p>
           </div>
         </div>
-      </section>
+        <hr className="border-gray-300" />
+        <div className="flex items-start gap-6">
+          <div className="bg-[#D4AF37] p-6 rounded-lg">
+            <Image src="/images/img_women.svg" alt="Gynecology Services" width={44} height={44} />
+          </div>
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-3">Maternity & Women’s Health</h3>
+            <p className="text-gray-500 leading-relaxed">
+              Complete care for pregnancy, childbirth, fertility issues, and women’s health including C-sections and surgeries.
+            </p>
+          </div>
+        </div>
+        <hr className="border-gray-300" />
+        <div className="flex items-start gap-6">
+          <div className="bg-[#D4AF37] p-6 rounded-lg">
+            <Image src="/images/img_ortho.svg" alt="Trauma" width={44} height={44} />
+          </div>
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-3">Trauma Care & Pediatric Orthopedics</h3>
+            <p className="text-gray-500 leading-relaxed">
+              Emergency fracture care, pediatric orthopedics, Ilizarov surgery, digital X-ray, and arthritis management.
+            </p>
+          </div>
+        </div>
+     <div className="pt-4">
+          <Link href="/services">
+            <Button variant="primary" size="large" className="text-[#D4AF37]">
+              All Services
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       {/* Team Section */}
       
       {/* Testimonials Section */}
@@ -168,30 +161,41 @@ export default function HomePage() {
             <div>
               <p className="text-accent font-medium mb-4">Testimonials</p>
               <h2 className="text-5xl font-semibold text-[#D4AF37] mb-6 leading-tight">
-                What Our Patients Say About Us
+                What Our Patients Say About Cortex Hospital
               </h2>
               <div className="mb-8">
                 <Image src="/images/img_icon.svg" alt="Quote icon" width={67} height={84} />
               </div>
               <p className="text-[#D4AF37] text-lg mb-8 leading-relaxed">
-                Purus turpis vivamus sem est blandit. In at egestas id sollicitudin mattis integer aliquet ut tempor. Risus enim nisi ipsum imperdiet. Sed turpis tellus quisque tellus ipsum malesuada.
+                "The orthopaedic team at Cortex Hospital gave me my life back after my knee replacement. The gynecology department also provided excellent care during my treatment. I couldn't be happier with the professional and compassionate service."
               </p>
               <div className="flex items-center gap-4">
-                <div className="w-20 h-20 bg-gray-900 rounded-full"></div>
+                
+                             <div className="flex items-center gap-4">
+                <div className="w-20 h-20 bg-gray-900 rounded-full relative overflow-hidden">
+                  <Image 
+                    src="/images/patientImage.jpeg" 
+                    alt="Nityom Tikhe - Patient" 
+                    fill
+                    className="object-cover w-full h-full"
+                  />
+                </div>
                 <div>
-                  <h4 className="text-2xl font-semibold text-[#D4AF37]">Jose Turner</h4>
-                  <p className="text-[#D4AF37]">Customer</p>
+                  <h4 className="text-2xl font-semibold text-[#D4AF37]">Nityom Tikhe</h4>
+                  <p className="text-[#D4AF37]">Patient</p>
                 </div>
               </div>
+              </div>
             </div>
-            <div>
-              <Image 
-                src="/images/img_image.svg" 
-                alt="Patient testimonial" 
-                width={552}
-                height={456}
-                className="w-full rounded-lg"
-              />
+            <div className="relative">
+              <div className="bg-gray-900 rounded-lg h-96 lg:h-[550px] relative overflow-hidden">
+                <Image 
+                  src="/images/hospitalImage3.jpg" 
+                  alt="Cortex Hospital - Patient testimonial" 
+                  fill
+                  className="object-cover w-full h-full rounded-lg"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -202,35 +206,35 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <p className="text-accent font-medium mb-4">How It Works</p>
             <h2 className="text-5xl font-semibold text-gray-900 mb-6 leading-tight">
-              Your Journey to a Healthy Smile Starts Here
+              Your Journey to Better Health at Cortex Hospital
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <div className="bg-[#D4AF37] p-6 rounded-lg w-24 h-24 mx-auto mb-6 flex items-center justify-center">
-                <Image src="/images/img_scedule.svg" alt="Schedule appointment" width={44} height={44} className="invert" />
+                <Image src="/images/appointment.png" alt="Schedule appointment" width={44} height={44}  />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Make Appointment</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Schedule Consultation</h3>
               <p className="text-gray-500 leading-relaxed">
-                Etiam fusce arcu ac auctor nisl purus consectetur. Eu viverra ultricies sit.
+                Book your appointment with our orthopaedic or gynecology specialists for comprehensive evaluation.
               </p>
             </div>
             <div className="text-center">
               <div className="bg-[#D4AF37] p-6 rounded-lg w-24 h-24 mx-auto mb-6 flex items-center justify-center">
-                <Image src="/images/img_dentist.svg" alt="Expert care" width={44} height={44} className="invert" />
+                <Image src="/images/doctor.png" alt="Expert care" width={44} height={44}  />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Expert Orthodontic Treatment</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Expert Medical Care</h3>
               <p className="text-gray-500 leading-relaxed">
-                Etiam fusce arcu ac auctor nisl purus consectetur. Eu viverra ultricies sit.
+                Receive personalized treatment from our experienced orthopaedic surgeons and gynecologists.
               </p>
             </div>
-            <div className="text-center">
+            <div className="text-center">     
               <div className="bg-[#D4AF37] p-6 rounded-lg w-24 h-24 mx-auto mb-6 flex items-center justify-center">
-                <Image src="/images/img_whitening.svg" alt="Radiate confidence" width={44} height={44} className="invert" />
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Radiate Confidence</h3>
+                <Image src="/images/ortho.png" alt="Radiate confidence" width={44} height={44} />
+        </div> 
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Complete Recovery</h3>
               <p className="text-gray-500 leading-relaxed">
-                Etiam fusce arcu ac auctor nisl purus consectetur. Eu viverra ultricies sit.
+                Experience full recovery and improved quality of life with our comprehensive care approach.
               </p>
             </div>
           </div>

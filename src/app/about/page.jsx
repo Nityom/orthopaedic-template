@@ -36,7 +36,7 @@ export default function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              Excellence in Orthopedic Care
+              Cortex Hospital: Excellence in Orthopaedic & Gynecology Care
             </motion.h1>
             <motion.p 
               className="text-base md:text-lg text-gray-300 mb-6 md:mb-8 leading-relaxed"
@@ -44,7 +44,7 @@ export default function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
             >
-              With over 15 years of experience, we've been delivering exceptional orthopedic care and helping patients regain their mobility and quality of life.
+              With over 15 years of experience, Cortex Hospital has been delivering exceptional orthopaedic and gynecological care, helping patients achieve optimal health and quality of life.
             </motion.p>
           </motion.div>
         </div>
@@ -95,13 +95,13 @@ export default function AboutPage() {
             <div className="order-2 lg:order-1">
               <p className="text-gray-900 font-medium mb-3 md:mb-4">Our Story</p>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 mb-4 md:mb-6 leading-tight">
-                The Journey of Advanced Orthopedics
+                The Journey of Cortex Hospital
               </h2>
               <p className="text-gray-500 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
-                Founded in 2008, our orthopedic center began with a clear mission: to provide advanced orthopedic care using cutting-edge technology and minimally invasive techniques. Dr. Robert Mitchell started the practice with a focus on joint replacement and sports medicine.
+                Founded in 2008, Cortex Hospital began with a clear mission: to provide comprehensive orthopaedic and gynecological care under one roof. Dr. Sarah Mitchell and Dr. Robert Chen started the practice with a focus on women's health and musculoskeletal wellness.
               </p>
               <p className="text-gray-500 text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
-                Today, we've evolved into a comprehensive orthopedic facility with multiple subspecialties, but our core mission remains unchanged - delivering personalized care and helping patients return to an active, pain-free lifestyle.
+                Today, we've evolved into a leading medical facility specializing in orthopaedic surgery and gynecological care, but our core mission remains unchanged - delivering personalized, compassionate care that helps patients achieve optimal health and well-being.
               </p>
               <Button variant="primary" size="large" className="w-full sm:w-auto">
                 Our Services
@@ -109,10 +109,12 @@ export default function AboutPage() {
             </div>
             <div className="relative order-1 lg:order-2 mb-8 lg:mb-0">
               <div className="bg-gray-900 rounded-lg h-64 sm:h-80 lg:h-96 relative overflow-hidden">
-                {/* Image placeholder */}
-                <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                  [Clinic Story Image]
-                </div>
+                <Image 
+                  src="/images/hospitalImage1.jpg" 
+                  alt="Cortex Hospital - Our Story" 
+                  fill
+                  className="object-cover w-full h-full"
+                />
               </div>
             </div>
           </div>
@@ -128,7 +130,7 @@ export default function AboutPage() {
               What Makes Us Different
             </h2>
            <p className="text-gray-500 text-base md:text-lg max-w-3xl mx-auto">
-  At Cortex Hospital, our core values shape every aspect of our orthodontic care. They guide how we treat each case, support our patients, and collaborate as a team to ensure precision and excellence.
+  At Cortex Hospital, our core values shape every aspect of our orthopaedic and gynecological care. They guide how we treat each patient, support our community, and collaborate as a team to ensure excellence and compassion.
 </p>
 
           </div>
@@ -140,7 +142,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3 md:mb-4">Excellence</h3>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                We maintain the highest standards in orthopedic care through advanced technology and evidence-based treatments.
+                We maintain the highest standards in orthopaedic and gynecological care through advanced technology and evidence-based treatments.
               </p>
             </Card>
               <Card className="text-center p-6 md:p-8">
@@ -149,7 +151,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3 md:mb-4">Patient-Centered</h3>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                We develop personalized treatment plans that consider each patient's lifestyle, goals, and recovery needs.
+                We develop personalized treatment plans that consider each patient's unique needs, lifestyle, and health goals.
               </p>
             </Card>
             
@@ -159,7 +161,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3 md:mb-4">Innovation</h3>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                We stay at the forefront of orthopedic medicine, embracing new techniques and technologies for better patient outcomes.
+                We stay at the forefront of medical care, embracing new techniques and technologies for better patient outcomes in both orthopaedics and gynecology.
               </p>
             </Card>
           </div>
@@ -168,45 +170,52 @@ export default function AboutPage() {
         {/* Our Team Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-primary">
         <div className="max-w-7xl mx-auto px-4">
-      <div className="text-center mb-8 md:mb-12 lg:mb-16">
-  <p className="text-gray-300 font-medium mb-3 md:mb-4">Our Team</p>
-  <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 md:mb-6 leading-tight">
-    Meet Our Orthodontic Specialists
-  </h2>
-  <p className="text-gray-200 text-base md:text-lg max-w-4xl mx-auto">
-    Our team is composed of skilled orthodontists dedicated to precise diagnosis, effective treatment planning, and advanced techniques for jaw and teeth alignment.
-  </p>
-</div>
+          <div className="text-center mb-8 md:mb-12 lg:mb-16">
+            <p className="text-gray-300 font-medium mb-3 md:mb-4">Our Team</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 md:mb-6 leading-tight">
+              Meet Our Medical Specialists
+            </h2>
+            <p className="text-gray-200 text-base md:text-lg max-w-4xl mx-auto">
+              Our team is composed of skilled orthopaedic surgeons and gynecologists dedicated to providing comprehensive care with precision, expertise, and compassion.
+            </p>
+          </div>
 
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {[
-              { name: "Dr. Vipeen Raut", specialty: "Joint Replacement Specialist" },
-              { name: "Dr. Michael Chen", specialty: "Spine Surgeon" },
-              { name: "Dr. Olivia Carter", specialty: "Sports Medicine Specialist" },
-              { name: "Dr. James Wilson", specialty: "Trauma Surgeon" }
-            ].map((doctor, index) => (
-              <Card key={index} className="bg-white rounded-lg overflow-hidden">
-                <div className="bg-gray-900 h-48 sm:h-56 md:h-64 relative">
-                  {/* Doctor image placeholder */}
-                  <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                    [Doctor Photo]
+          <div className="flex justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 max-w-6xl w-full">
+              {[
+                { name: "Dr. Vipin Raut", specialty: "Orthopaedic Surgeon", image: "/images/doctor1.jpg" },
+                { name: "Dr. Smita Raut", specialty: "Gynecologist & Obstetrician", image: null },
+              ].map((doctor, index) => (
+                <Card key={index} className="bg-white rounded-lg overflow-hidden w-[40]">
+                  <div className="bg-gray-900 h-56 sm:h-64 md:h-80 relative">
+                    {doctor.image ? (
+                      <Image 
+                        src={doctor.image} 
+                        alt={doctor.name} 
+                        fill
+                        className="object-cover w-full h-full"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center text-gray-500">
+                        [Doctor Photo]
+                      </div>
+                    )}
                   </div>
-                </div>
-                <div className="p-4 sm:p-6">
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-1 sm:mb-2">{doctor.name}</h3>
-                  <p className="text-accent text-sm sm:text-base mb-3 sm:mb-4">{doctor.specialty}</p>
-                  <div className="flex gap-2">
-                    <div className="bg-accent p-1.5 sm:p-2 rounded-lg">
-                      <Image src="/images/img_facebook.svg" alt="Facebook" width={18} height={18} />
-                    </div>
-                    <div className="bg-accent p-1.5 sm:p-2 rounded-lg">
-                      <Image src="/images/img_linkedin.svg" alt="LinkedIn" width={18} height={18} />
+                  <div className="p-6 sm:p-8">
+                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2 sm:mb-3">{doctor.name}</h3>
+                    <p className="text-accent text-base sm:text-lg mb-4 sm:mb-6">{doctor.specialty}</p>
+                    <div className="flex gap-3">
+                      <div className="bg-accent p-2 sm:p-3 rounded-lg">
+                        <Image src="/images/img_facebook.svg" alt="Facebook" width={20} height={20} />
+                      </div>
+                      <div className="bg-accent p-2 sm:p-3 rounded-lg">
+                        <Image src="/images/img_linkedin.svg" alt="LinkedIn" width={20} height={20} />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Card>
-            ))}
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -216,10 +225,10 @@ export default function AboutPage() {
           <div className="text-center mb-8 md:mb-12 lg:mb-16">
             <p className="text-gray-900 font-medium mb-3 md:mb-4">Our Facility</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 mb-4 md:mb-6 leading-tight">
-              State-of-the-Art Orthopedic Center
+              State-of-the-Art Medical Center
             </h2>
             <p className="text-gray-500 text-base md:text-lg max-w-3xl mx-auto">
-              Our modern facility is equipped with advanced diagnostic and treatment technology to provide comprehensive orthopedic care in a comfortable environment.
+              Our modern facility is equipped with advanced diagnostic and treatment technology to provide comprehensive orthopaedic and gynecological care in a comfortable, welcoming environment.
             </p>
           </div>
           
@@ -268,7 +277,7 @@ export default function AboutPage() {
                   <Image src="/images/img_icon.svg" alt="Quote" width={30} height={30} />
                 </div>
                 <p className="text-gray-500 text-sm md:text-base mb-6 md:mb-8 leading-relaxed">
-  "I was initially nervous about getting braces, but the team at Cortex Hospital guided me through every step with care and professionalism. The entire process was smooth and far more comfortable than I expected."
+  "The care I received at Cortex Hospital was exceptional. The orthopaedic team helped me recover from my knee surgery, and the gynecology department provided excellent support throughout my treatment. I highly recommend this hospital."
 </p>
 
                 <div className="flex items-center gap-3 md:gap-4">

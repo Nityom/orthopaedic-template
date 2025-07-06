@@ -19,10 +19,10 @@ export default function ContactPage() {
           <div className="max-w-2xl">
             <p className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-accent">Contact Us</p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold mb-4 md:mb-6 leading-tight">
-              Get In Touch With Us
+              Get In Touch With Cortex Hospital
             </h1>
             <p className="text-base md:text-lg text-accent-light mb-6 md:mb-8 leading-relaxed">
-              Have questions or ready to schedule an appointment? Reach out to our friendly team today.
+              Have questions about our orthopaedic or gynecological services? Ready to schedule an appointment? Reach out to our friendly team today.
             </p>
           </div>
         </div>
@@ -44,7 +44,7 @@ export default function ContactPage() {
             <div>
               <p className="text-accent font-medium mb-4">Contact Information</p>
               <h2 className="text-4xl font-semibold text-primary mb-8 leading-tight">
-                We're Here For You
+                Cortex Hospital is Here For You
               </h2>
               
               <div className="space-y-8 mb-12">
@@ -59,10 +59,11 @@ export default function ContactPage() {
                     />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Visit Our Office</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Visit Cortex Hospital</h3>
                     <p className="text-gray-500">
-                      Jl Danau Bratan, Malang City<br />
-                      East Java 65139, Indonesia
+                      123 Medical Center Drive<br />
+                      Healthcare District, City 12345<br />
+                      United States
                     </p>
                   </div>
                 </div>
@@ -80,8 +81,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
                     <p className="text-gray-500">
-                      +62 864 6444 2222<br />
-                      Monday - Friday: 9:00 AM - 7:00 PM
+                      +1 (555) 123-4567<br />
+                      Monday - Friday: 8:00 AM - 6:00 PM<br />
+                      Saturday: 9:00 AM - 2:00 PM
                     </p>
                   </div>
                 </div>
@@ -100,7 +102,7 @@ export default function ContactPage() {
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
                     <p className="text-gray-500">
                       info@cortexhospital.com<br />
-                      info@cortexhospital.com
+                      appointments@cortexhospital.com
                     </p>
                   </div>
                 </div>

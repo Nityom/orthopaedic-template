@@ -36,7 +36,7 @@ const Header = () => {
             variants={navItemAnimation}
           >
             <Image src="/images/img_mappin.svg" alt="Location" width={16} height={22} />
-            <span className="text-primary text-xs md:text-sm">Jl Danau Bratan, Malang City, East Java 65139</span>
+            <span className="text-primary text-xs md:text-sm">123 Medical Center Drive, Healthcare District</span>
           </motion.div>
           <div className="flex items-center gap-4 md:gap-6">
             <motion.div 
@@ -44,7 +44,7 @@ const Header = () => {
               variants={navItemAnimation}
             >
               <Image src="/images/img_phone.svg" alt="Phone" width={16} height={16} />
-              <span className="text-primary text-xs md:text-sm">+62 864 6444 2222</span>
+              <span className="text-primary text-xs md:text-sm">+1 (555) 123-4567</span>
             </motion.div>
             <div className="w-px h-4 bg-primary hidden md:block"></div>
             <motion.div 
@@ -52,7 +52,7 @@ const Header = () => {
               variants={navItemAnimation}
             >
               <Image src="/images/img_mail.svg" alt="Email" width={16} height={16} />
-              <span className="text-primary text-xs md:text-sm">help@cortex.com</span>
+              <span className="text-primary text-xs md:text-sm">info@cortexhospital.com</span>
             </motion.div>
           </div>
         </div>
@@ -67,9 +67,18 @@ const Header = () => {
       >
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link href="/" className="text-xl md:text-2xl font-bold">
-              <span className="text-primary font-extrabold">Cortex</span>
-              <span className="text-primary font-light">Hospital</span>
+            <Link href="/" className="flex items-center gap-2 md:gap-3">
+              <Image 
+                src="/images/logo.png" 
+                alt="Cortex Hospital Logo" 
+                width={40} 
+                height={40} 
+                className="w-full h-full"
+              />
+              <div className="text-xl md:text-2xl font-bold">
+                <span className="text-primary font-extrabold">Cortex</span>
+                <span className="text-primary font-light">Hospital</span>
+              </div>
             </Link>
           </motion.div>
           
