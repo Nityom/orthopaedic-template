@@ -91,15 +91,15 @@ export default function HomePage() {
         </div>
       </section>
       {/* Services Section */}
-  <section className="py-20 bg-white">
+      <section className="py-20 bg-white">
   <div className="max-w-7xl mx-auto px-4">
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <div>
         <p className="text-accent font-medium mb-4">Our Services</p>
-        <h2 className="text-5xl font-semibold text-gray-900 mb-6 leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6 leading-tight">
           Comprehensive Orthopaedic & Gynecological Care
         </h2>
-        <p className="text-gray-500 text-lg mb-8 leading-relaxed">
+        <p className="text-gray-500 text-sm sm:text-base lg:text-lg mb-8 leading-relaxed">
           At Cortex Hospital, we bring together expert orthopaedic and gynecological care under one roof. From joint replacements and trauma surgery to maternity and fertility care, we provide holistic and personalized health solutions.
         </p>
       </div>
@@ -109,8 +109,8 @@ export default function HomePage() {
             <Image src="/images/img_joint.svg" alt="Joint Replacement" width={44} height={44} />
           </div>
           <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-3">Joint Replacement & Spine Surgery</h3>
-            <p className="text-gray-500 leading-relaxed">
+            <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Joint Replacement & Spine Surgery</h3>
+            <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
               Expert procedures for joint replacements and spinal care including fracture treatments and deformity correction.
             </p>
           </div>
@@ -121,9 +121,9 @@ export default function HomePage() {
             <Image src="/images/img_women.svg" alt="Gynecology Services" width={44} height={44} />
           </div>
           <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-3">Maternity & Women’s Health</h3>
-            <p className="text-gray-500 leading-relaxed">
-              Complete care for pregnancy, childbirth, fertility issues, and women’s health including C-sections and surgeries.
+            <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Maternity & Women's Health</h3>
+            <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
+              Complete care for pregnancy, childbirth, fertility issues, and women's health including C-sections and surgeries.
             </p>
           </div>
         </div>
@@ -133,13 +133,13 @@ export default function HomePage() {
             <Image src="/images/img_ortho.svg" alt="Trauma" width={44} height={44} />
           </div>
           <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-3">Trauma Care & Pediatric Orthopedics</h3>
-            <p className="text-gray-500 leading-relaxed">
+            <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Trauma Care & Pediatric Orthopedics</h3>
+            <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
               Emergency fracture care, pediatric orthopedics, Ilizarov surgery, digital X-ray, and arthritis management.
             </p>
           </div>
         </div>
-     <div className="pt-4">
+        <div className="pt-4">
           <Link href="/services">
             <Button variant="primary" size="large" className="text-[#D4AF37]">
               All Services
