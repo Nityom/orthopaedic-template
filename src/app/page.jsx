@@ -18,7 +18,7 @@ export default function HomePage() {
       <section className="py-6 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-stretch gap-6 lg:gap-12">
-            <div className="w-full lg:w-1/2 order-1 lg:order-2 mb-6 lg:mb-0">
+            <div className="w-full lg:w-1/2 order-2 lg:order-2 mb-6 lg:mb-0">
               <p className="text-accent font-medium mb-3">About Us</p>
               <h2 className="text-2xl sm:text-3xl lg:text-5xl font-semibold text-primary mb-3 sm:mb-5 leading-tight">
                 Cortex Hospital - Excellence in Orthopaedic & Gynecology Care
@@ -48,8 +48,8 @@ export default function HomePage() {
               </div>
             </div>
  
-            <div className="w-full lg:w-1/2 order-2 lg:order-1">
-              <div className="bg-primary rounded-lg h-80 sm:h-96 lg:h-full min-h-96 relative overflow-hidden">
+            <div className="w-full lg:w-1/2 order-1 lg:order-1">
+              <div className="bg-primary rounded-lg h-64 sm:h-80 lg:h-full min-h-64 relative overflow-hidden">
                 <Image 
                   src="/images/hospitalImage.jpg" 
                   alt="Cortex Hospital - Modern medical facility" 
@@ -58,7 +58,6 @@ export default function HomePage() {
                 />
               </div>
             </div>
-
           </div>
         </div>
       </section>
