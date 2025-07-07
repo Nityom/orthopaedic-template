@@ -75,15 +75,15 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <h3 className="text-7xl font-semibold text-accent mb-4">780+</h3>
+                <h3 className="text-7xl font-semibold text-accent mb-4">5K+</h3>
                 <p className="text-accent-light text-lg">Happy Patients</p>
               </div>
               <div>
-                <h3 className="text-7xl font-semibold text-accent mb-4">560+</h3>
-                <p className="text-accent-light text-lg">Online Appointments</p>
+                <h3 className="text-7xl font-semibold text-accent mb-4">20+</h3>
+                <p className="text-accent-light text-lg">Years Of Experience </p>
               </div>
               <div>
-                <h3 className="text-7xl font-semibold text-accent mb-4">340+</h3>
+                <h3 className="text-7xl font-semibold text-accent mb-4">34+</h3>
                 <p className="text-accent-light text-lg">Awards Won</p>
               </div>
             </div>
