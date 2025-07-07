@@ -233,23 +233,31 @@ export default function AboutPage() {
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <div className="bg-gray-900 rounded-lg h-48 sm:h-56 md:h-64 relative">
-              {/* Facility image placeholder */}
-              <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                [Reception Area]
-              </div>
+            <div className="bg-gray-900 rounded-lg h-58 sm:h-56 md:h-64 relative overflow-hidden">
+              <Image 
+                src="/images/hospitalImage.jpg" 
+                alt="Reception Area" 
+                fill
+                className="object-cover w-full h-full"
+              />
             </div>
             <div className="bg-gray-900 rounded-lg h-48 sm:h-56 md:h-64 relative">
               {/* Facility image placeholder */}
-              <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                [Treatment Room]
-              </div>
+                <Image 
+                src="/images/hospitalImage1.jpg" 
+                alt="Reception Area" 
+                fill
+                className="object-cover w-full h-full"
+              />
             </div>
             <div className="bg-gray-900 rounded-lg h-48 sm:h-56 md:h-64 relative sm:col-span-2 lg:col-span-1">
               {/* Facility image placeholder */}
-              <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                [Equipment]
-              </div>
+             <Image 
+                src="/images/hospitalImage2.png" 
+                alt="Reception Area" 
+                fill
+                className="object-cover w-full h-full"
+              />
             </div>
           </div>
           
@@ -271,22 +279,45 @@ export default function AboutPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {[1, 2, 3].map((item) => (
-              <Card key={item} className="p-6 md:p-8">
+            {[
+              {
+                review: "Dr. Vipin Raut performed my knee replacement surgery with exceptional skill. The entire orthopaedic team was professional and caring throughout my recovery. I'm now pain-free and back to my daily activities. Highly recommended!",
+                name: "Rajesh Sharma",
+                title: "Knee Surgery Patient",
+                image: "/images/patient1.png"
+              },
+              {
+                review :"I went to the gynecology department at Cortex Hospital for a check-up, and Dr. Smita Raut and her team were really kind and supportive. They made me feel comfortable and took my concerns seriously",
+                name: "Priya Patel",
+                title: "Gynac Patient",
+                image: "/images/patient3.png"
+              },
+              {
+                review: "After my shoulder injury, I was worried about my recovery. The physiotherapy and orthopaedic care here exceeded my expectations. The staff is knowledgeable, facilities are modern, and the treatment approach is comprehensive.",
+                name: "Amit Kumar",
+                title: "Shoulder Treatment Patient",
+                image: "/images/patient2.png"
+              }
+            ].map((testimonial, index) => (
+              <Card key={index} className="p-6 md:p-8">
                 <div className="mb-4 md:mb-6">
-                  <Image src="/images/img_icon.svg" alt="Quote" width={30} height={30} />
+                  <Image src="/images/img_iconn.svg" alt="Quote" width={30} height={30} />
                 </div>
                 <p className="text-gray-500 text-sm md:text-base mb-6 md:mb-8 leading-relaxed">
-  "The care I received at Cortex Hospital was exceptional. The orthopaedic team helped me recover from my knee surgery, and the gynecology department provided excellent support throughout my treatment. I highly recommend this hospital."
-</p>
-
+                  "{testimonial.review}"
+                </p>
                 <div className="flex items-center gap-3 md:gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-gray-300 rounded-full">
-                    {/* Patient photo placeholder */}
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-gray-300 rounded-full relative overflow-hidden">
+                    <Image 
+                      src={testimonial.image} 
+                      alt={testimonial.name} 
+                      fill
+                      className="object-cover w-full h-full"
+                    />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 text-sm md:text-base">Patient Name</h4>
-                    <p className="text-gray-500 text-xs md:text-sm">Regular Patient</p>
+                    <h4 className="font-semibold text-gray-900 text-sm md:text-base">{testimonial.name}</h4>
+                    <p className="text-gray-500 text-xs md:text-sm">{testimonial.title}</p>
                   </div>
                 </div>
               </Card>

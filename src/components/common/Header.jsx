@@ -36,7 +36,7 @@ const Header = () => {
             variants={navItemAnimation}
           >
             <Image src="/images/img_mappin.svg" alt="Location" width={16} height={22} />
-            <span className="text-primary text-xs md:text-sm">123 Medical Center Drive, Healthcare District</span>
+            <span className="text-primary text-xs md:text-sm">Cortex Hospital, Beside Urich Mall, Aarti Square, Wardha</span>
           </motion.div>
           <div className="flex items-center gap-4 md:gap-6">
             <motion.div 
@@ -44,7 +44,7 @@ const Header = () => {
               variants={navItemAnimation}
             >
               <Image src="/images/img_phone.svg" alt="Phone" width={16} height={16} />
-              <span className="text-primary text-xs md:text-sm">+1 (555) 123-4567</span>
+              <span className="text-primary text-xs md:text-sm">+91 9373280505</span>
             </motion.div>
             <div className="w-px h-4 bg-primary hidden md:block"></div>
             <motion.div 
@@ -112,16 +112,18 @@ const Header = () => {
               whileTap="tap"
               variants={navItemAnimation}
             >
-              <Button 
-                variant="primary" 
-                size="medium" 
-                className="hidden sm:flex bg-teal-800 hover:bg-teal-700 px-4 py-2 md:px-6 md:py-3"
-              >
-                Get Started
-                <Image src="/images/img_arrowright.svg" alt="Arrow" width={20} height={20} className="ml-2" />
-              </Button>
+              <Link href="/contact">
+                <Button 
+                  variant="primary" 
+                  size="medium" 
+                  className="hidden sm:flex bg-teal-800 hover:bg-teal-700 px-4 py-2 md:px-6 md:py-3"
+                >
+                  Book Your Appointment
+                  <Image src="/images/img_arrowright.svg" alt="Arrow" width={20} height={20} className="ml-2" />
+                </Button>
+              </Link>
             </motion.div>
-
+            
             {/* Mobile Menu Button */}
             <motion.button
               whileTap={{ scale: 0.9 }}
@@ -194,18 +196,6 @@ const Header = () => {
                   whileHover={{ backgroundColor: '#e6fffa' }}
                 >
                   <Link 
-                    href="/pages" 
-                    className={`px-4 py-3 border-b border-gray-100 block ${pathname === '/pages' ? 'bg-teal-50 text-teal-800' : 'text-gray-900'}`}
-                  >
-                    Page
-                  </Link>
-                </motion.div>
-                
-                <motion.div 
-                  variants={navItemAnimation}
-                  whileHover={{ backgroundColor: '#e6fffa' }}
-                >
-                  <Link 
                     href="/contact" 
                     className={`px-4 py-3 block ${pathname === '/contact' ? 'bg-teal-50 text-teal-800' : 'text-gray-900'}`}
                   >
@@ -218,14 +208,16 @@ const Header = () => {
                   variants={navItemAnimation}
                   whileHover={{ scale: 1.02 }}
                 >
-                  <Button
-                    variant="primary"
-                    size="medium"
-                    className="w-full bg-teal-800 hover:bg-teal-700 flex items-center justify-center"
-                  >
-                    Get Started
-                    <Image src="/images/img_arrowright.svg" alt="Arrow" width={20} height={20} className="ml-2" />
-                  </Button>
+                  <Link href="/contact">
+                    <Button
+                      variant="primary"
+                      size="medium"
+                      className="w-full bg-teal-800 hover:bg-teal-700 flex items-center justify-center"
+                    >
+                      Book Your Appointment
+                      <Image src="/images/img_arrowright.svg" alt="Arrow" width={20} height={20} className="ml-2" />
+                    </Button>
+                  </Link>
                 </motion.div>
               </nav>
             </motion.div>

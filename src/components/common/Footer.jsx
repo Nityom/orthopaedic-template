@@ -71,21 +71,21 @@ const Footer = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
+                <Image src="/images/img_facebook.svg" alt="Facebook" width={16} height={16} />
+              </motion.div>
+              <motion.div 
+                className="bg-[#D4AF37] p-2 md:p-3 rounded-lg cursor-pointer"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Image src="/images/img_linkedin.svg" alt="LinkedIn" width={16} height={16} />
+              </motion.div>
+              <motion.div 
+                className="bg-[#D4AF37] p-2 md:p-3 rounded-lg cursor-pointer"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Image src="/images/img_twitter.svg" alt="Twitter" width={16} height={16} />
-              </motion.div>
-              <motion.div 
-                className="bg-[#D4AF37] p-2 md:p-3 rounded-lg cursor-pointer"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Image src="/images/img_icon_02.svg" alt="Instagram" width={16} height={16} />
-              </motion.div>
-              <motion.div 
-                className="bg-[#D4AF37] p-2 md:p-3 rounded-lg cursor-pointer"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Image src="/images/img_youtube.svg" alt="YouTube" width={16} height={16} />
               </motion.div>
             </motion.div>
           </motion.div>
@@ -107,7 +107,9 @@ const Footer = () => {
                   </svg>
                 </div>
                 <p className="text-accent-light text-sm md:text-base">
-                  123 Medical Plaza, Healthcare District, City 12345
+                  Cortex Hospital, Beside Urich Mall,<br />
+                  Aarti Square, Mohini Nagar, Nagpur Road<br />
+                  Wardha (M.S) - 442001
                 </p>
               </div>
 
@@ -119,7 +121,7 @@ const Footer = () => {
                   </svg>
                 </div>
                 <p className="text-accent-light text-sm md:text-base">
-                  +1 (555) 123-4567
+                  +91 9373280505
                 </p>
               </div>
 
@@ -143,8 +145,9 @@ const Footer = () => {
                   </svg>
                 </div>
                 <div className="text-accent-light text-sm md:text-base">
-                  <p>Mon-Fri: 8AM-6PM</p>
-                  <p>Sat: 9AM-3PM</p>
+                  <p>Mon-Sat: 10AM-1PM</p>
+                  <p>Mon-Sat: 6PM-7:30PM</p>
+                  <p>Sunday: Closed</p>
                 </div>
               </div>
             </div>

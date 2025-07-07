@@ -61,9 +61,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Visit Cortex Hospital</h3>
                     <p className="text-gray-500">
-                      123 Medical Center Drive<br />
-                      Healthcare District, City 12345<br />
-                      United States
+                     Cortex Hospital, Beside Urich Mall, <br />
+                     Aarti Square,Mohini Nagar, Nagpur Road<br />
+                      Wardha(M.S)-442001
                     </p>
                   </div>
                 </div>
@@ -81,9 +81,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
                     <p className="text-gray-500">
-                      +1 (555) 123-4567<br />
-                      Monday - Friday: 8:00 AM - 6:00 PM<br />
-                      Saturday: 9:00 AM - 2:00 PM
+                      +91 9373280505<br />
+                      Monday - Saturday:<br /> Morning: 10:00 AM - 1:00 PM<br />
+                      Evening: 6:00 PM - 7:30 PM<br />
+                      Sunday Closed
                     </p>
                   </div>
                 </div>
@@ -148,12 +149,12 @@ export default function ContactPage() {
               <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">Regular Hours</h3>
               <ul className="space-y-4">
                 <li className="flex justify-between items-center pb-4 border-b border-gray-200">
-                  <span className="font-medium text-gray-900">Monday - Friday</span>
-                  <span className="text-gray-500">9:00 AM - 7:00 PM</span>
+                  <span className="font-medium text-gray-900">Monday - Saturday</span>
+                  <span className="text-gray-500">Morning: 10:00 AM - 1:00 PM</span>
                 </li>
                 <li className="flex justify-between items-center pb-4 border-b border-gray-200">
-                  <span className="font-medium text-gray-900">Saturday</span>
-                  <span className="text-gray-500">9:00 AM - 5:00 PM</span>
+                  <span className="font-medium text-gray-900">Monday - Saturday</span>
+                  <span className="text-gray-500">Evening: 6:00 PM - 7:30 PM</span>
                 </li>
                 <li className="flex justify-between items-center pb-4">
                   <span className="font-medium text-gray-900">Sunday</span>
@@ -164,16 +165,15 @@ export default function ContactPage() {
             
             <Card className="p-8 bg-primary text-white">
               <h3 className="text-2xl font-semibold mb-6 text-center">Emergency Care</h3>
-             <p className="mb-6 leading-relaxed">
-  Orthodontic emergencies, such as broken brackets, poking wires, or appliance issues, can occur unexpectedly. If you're experiencing significant discomfort or a problem with your orthodontic device, please contact our emergency number immediately.
-</p>
-
+              <p className="mb-6 leading-relaxed">
+                Orthopaedic and gynecological emergencies can occur unexpectedly. If you're experiencing significant discomfort or urgent medical issues, please contact our emergency number immediately.
+              </p>
               <div className="text-center p-4 bg-primary-light rounded-lg mb-6">
                 <p className="text-xl font-semibold">Emergency Hotline</p>
-                <p className="text-2xl font-bold text-accent">+62 864 6444 9999</p>
+                <p className="text-2xl font-bold text-accent">+91 9373280505</p>
               </div>
               <p className="text-sm text-center text-gray-200">
-                *Available 24/7 for orthodontic emergencies
+                *Available during regular hours for urgent consultations
               </p>
             </Card>
           </div>
@@ -193,12 +193,18 @@ export default function ContactPage() {
           
           <div className="bg-gray-200 rounded-lg h-96 relative">
             {/* Map placeholder */}
-            <div className="absolute inset-0 flex items-center justify-center text-gray-500 text-center">
-              <div>
-                <p className="mb-2 text-xl">Map of clinic location would go here</p>
-                <p>Jl Danau Bratan, Malang City, East Java 65139, Indonesia</p>
-              </div>
-            </div>
+         <div className="overflow-hidden rounded-lg h-96 w-full">
+  <iframe
+    src="https://www.google.com/maps?q=Cortex+Hospital,+PJX4%2BJ2Q,+Nagpur+Rd,+Sudampuri,+Wardha,+Maharashtra+442001&output=embed"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+
           </div>
           
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -231,57 +237,65 @@ export default function ContactPage() {
       </section>
         {/* FAQ Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <p className="text-[#0B1F44] font-medium mb-4">Frequently Asked Questions</p>
-            <h2 className="text-4xl font-semibold text-[#D4AF37] mb-6 leading-tight">
-              Common Questions
-            </h2>
-            <p className="text-gray-500 text-lg max-w-3xl mx-auto">
-              Find answers to the most frequently asked questions about our services and appointments.
-            </p>
-          </div>
-          
-          <div className="max-w-3xl mx-auto">
-            <div className="space-y-6">
-              {[
-                [
-  {
-    question: "How do I schedule an appointment?",
-    answer: "You can schedule an appointment by calling our office, using the contact form on our website, or sending us an email. We'll respond as soon as possible to confirm your orthodontic consultation."
-  },
-  {
-    question: "Do you accept orthodontic insurance?",
-    answer: "Yes, we accept most major orthodontic insurance plans. Please contact our office to confirm coverage with your specific provider and plan."
-  },
-  {
-    question: "What should I bring to my first appointment?",
-    answer: "Please bring your ID, insurance card, completed patient intake forms (available on our website), and any previous orthodontic records or X-rays if available."
-  },
-  {
-    question: "How often will I need to visit during treatment?",
-    answer: "Typically, orthodontic follow-up visits are scheduled every 4 to 8 weeks, depending on your treatment plan and progress."
-  },
-  {
-    question: "What payment methods do you accept?",
-    answer: "We accept cash, credit cards (Visa, Mastercard, American Express), debit cards, and offer flexible financing options for orthodontic treatments."
-  }
-]
-
-              ].map((faq, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-sm p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    {faq.question}
-                  </h3>
-                  <p className="text-gray-500">
-                    {faq.answer}
-                  </p>
-                </div>
-              ))}
+  <div className="max-w-7xl mx-auto px-4">
+    <div className="text-center mb-16">
+      <p className="text-accent font-medium mb-4">Frequently Asked Questions</p>
+      <h2 className="text-4xl font-semibold text-gray-900 mb-6 leading-tight">
+        Common Questions
+      </h2>
+      <p className="text-gray-500 text-lg max-w-3xl mx-auto">
+        Find answers to the most frequently asked questions about our services and appointments.
+      </p>
+    </div>
+    
+    <div className="max-w-3xl mx-auto">
+      <div className="space-y-4">
+        {[
+          {
+            question: "How do I schedule an appointment?",
+            answer: "You can schedule an appointment by calling our office at +91 9373280505, using the contact form on our website, or sending us an email. We'll respond as soon as possible to confirm your orthopaedic or gynecological consultation."
+          },
+          {
+            question: "Do you accept medical insurance?",
+            answer: "Yes, we accept most major medical insurance plans. Please contact our office to confirm coverage with your specific provider and plan for orthopaedic and gynecological services."
+          },
+          {
+            question: "What should I bring to my first appointment?",
+            answer: "Please bring your ID, insurance card, completed patient intake forms (available on our website), and any previous medical records, X-rays, or test results related to your condition."
+          },
+          {
+            question: "What are your office hours?",
+            answer: "We are open Monday through Saturday with morning hours from 10:00 AM - 1:00 PM and evening hours from 6:00 PM - 7:30 PM. We are closed on Sundays."
+          },
+          {
+            question: "Do you handle emergency cases?",
+            answer: "Yes, we handle orthopaedic and gynecological emergencies during our regular office hours. Please call +91 9373280505 immediately for urgent medical situations."
+          },
+          {
+            question: "What payment methods do you accept?",
+            answer: "We accept cash, UPI and offer flexible financing options for treatments."
+          }
+        ].map((faq, index) => (
+          <details key={index} className="bg-white rounded-lg shadow-sm overflow-hidden">
+            <summary className="cursor-pointer p-6 hover:bg-gray-50 transition-colors list-none">
+              <div className="flex justify-between items-center">
+                <h3 className="text-xl font-semibold text-gray-900 pr-4">
+                  {faq.question}
+                </h3>
+                <span className="text-gray-400 text-xl flex-shrink-0">+</span>
+              </div>
+            </summary>
+            <div className="px-6 pb-6">
+              <p className="text-gray-500 leading-relaxed">
+                {faq.answer}
+              </p>
             </div>
-          </div>
-        </div>
-      </section>
+          </details>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
       
       {/* CTA Section */}
      

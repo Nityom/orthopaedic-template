@@ -16,7 +16,7 @@ export default function ServicesPage() {
 
   const services = [
     {
-      icon: "/images/img_whitening.svg",
+      icon: "/images/traumaCare.png",
       title: "Well Equipped Fracture & Trauma Care Unit",
       description: "State-of-the-art emergency trauma care with advanced equipment for immediate fracture treatment and stabilization.",
       additionalInfo: {
@@ -30,7 +30,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/img_tooth_insurance.svg",
+      icon: "/images/operation.png",
       title: "Advanced Operation Theatre Complex",
       description: "Modern operation theatres with laminar air flow systems ensuring sterile environment for all surgical procedures.",
       additionalInfo: {
@@ -44,7 +44,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/img_implant.svg",
+      icon: "/images/ortho.png",
       title: "Joint Replacement",
       description: "Comprehensive joint replacement procedures for hips, knees, and shoulders using latest minimally invasive techniques.",
       additionalInfo: {
@@ -58,7 +58,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/img_dentist.svg",
+      icon: "/images/limb.png",
       title: "Limb Lengthening & Deformity Correction",
       description: "Advanced procedures for limb lengthening and correction of bone deformities using modern surgical techniques.",
       additionalInfo: {
@@ -72,7 +72,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/img_icon.svg",
+      icon: "/images/fractures.png",
       title: "Ilizarov Surgery",
       description: "Specialized Ilizarov external fixation techniques for complex fractures and bone reconstruction procedures.",
       additionalInfo: {
@@ -86,7 +86,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/img_users.svg",
+      icon: "/images/spine.png",
       title: "Spine Surgery & Fracture Treatment",
       description: "Comprehensive spinal care including minimally invasive spine surgery and advanced fracture treatment.",
       additionalInfo: {
@@ -100,7 +100,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/img_whitening.svg",
+      icon: "/images/pediatrics.png",
       title: "Pediatric Orthopedic Care",
       description: "Specialized orthopedic care for children including growth-related disorders and congenital conditions.",
       additionalInfo: {
@@ -114,7 +114,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/img_tooth_insurance.svg",
+      icon: "/images/shoulder.png",
       title: "Arthroscopic Surgery",
       description: "Minimally invasive arthroscopic procedures for joint problems with faster recovery and reduced scarring.",
       additionalInfo: {
@@ -128,7 +128,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/img_implant.svg",
+      icon: "/images/knee.png",
       title: "Arthritis & Osteoporosis Management",
       description: "Comprehensive management of arthritis and osteoporosis with medication, therapy, and lifestyle guidance.",
       additionalInfo: {
@@ -142,7 +142,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/img_dentist.svg",
+      icon: "/images/xray.png",
       title: "Digital X-ray & Pregnancy Care",
       description: "Advanced digital imaging and comprehensive antenatal and postnatal care for expectant mothers.",
       additionalInfo: {
@@ -155,22 +155,9 @@ export default function ServicesPage() {
         benefits: "Reduced radiation exposure, immediate results, comprehensive maternal care, and healthy pregnancy outcomes."
       }
     },
+
     {
-      icon: "/images/img_users.svg",
-      title: "Air-conditioned Labor Room",
-      description: "Comfortable, modern labor rooms with climate control for safe and comfortable delivery experience.",
-      additionalInfo: {
-        features: [
-          "Climate-controlled environment",
-          "Modern delivery equipment",
-          "Comfortable patient amenities",
-          "24/7 nursing support"
-        ],
-        benefits: "Enhanced comfort during labor, reduced stress, improved delivery outcomes, and better patient experience."
-      }
-    },
-    {
-      icon: "/images/img_whitening.svg",
+      icon: "/images/surgery.png",
       title: "Cesarean & Surgical Procedures",
       description: "Expert cesarean delivery and gynecological surgical procedures with advanced surgical techniques.",
       additionalInfo: {
@@ -184,7 +171,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/img_tooth_insurance.svg",
+      icon: "/images/infertility.png",
       title: "Infertility Prevention & Treatment",
       description: "Comprehensive fertility services including diagnosis, treatment, and counseling for reproductive health.",
       additionalInfo: {
@@ -197,22 +184,9 @@ export default function ServicesPage() {
         benefits: "Improved conception chances, personalized treatment plans, emotional support, and comprehensive care."
       }
     },
+  
     {
-      icon: "/images/img_implant.svg",
-      title: "Ayurveda Center",
-      description: "Traditional Ayurvedic treatments integrated with modern medicine for holistic healing approach.",
-      additionalInfo: {
-        features: [
-          "Traditional Ayurvedic treatments",
-          "Herbal medicine",
-          "Panchakarma therapies",
-          "Integrated healthcare approach"
-        ],
-        benefits: "Holistic healing, natural treatment options, improved overall wellness, and complementary care."
-      }
-    },
-    {
-      icon: "/images/img_dentist.svg",
+      icon: "/images/vagina.png",
       title: "Uterine Fibroid Surgery",
       description: "Advanced surgical treatment for uterine fibroids including minimally invasive laparoscopic procedures.",
       additionalInfo: {
@@ -226,7 +200,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/img_icon.svg",
+      icon: "/images/sonography.png",
       title: "Sonography Center",
       description: "State-of-the-art ultrasound imaging for accurate diagnosis and monitoring of various conditions.",
       additionalInfo: {
@@ -239,22 +213,9 @@ export default function ServicesPage() {
         benefits: "Accurate diagnosis, non-invasive imaging, real-time results, and comprehensive monitoring."
       }
     },
+
     {
-      icon: "/images/img_users.svg",
-      title: "Women's Disease Diagnosis",
-      description: "Comprehensive diagnosis and guidance for various women's health conditions and disorders.",
-      additionalInfo: {
-        features: [
-          "Comprehensive health screenings",
-          "Preventive care programs",
-          "Diagnostic testing",
-          "Health education and counseling"
-        ],
-        benefits: "Early detection, preventive care, personalized treatment plans, and improved women's health outcomes."
-      }
-    },
-    {
-      icon: "/images/img_whitening.svg",
+      icon: "/images/sexual.png",
       title: "Sexual Problem Treatment",
       description: "Confidential and professional treatment for sexual health issues with expert counseling and care.",
       additionalInfo: {
@@ -285,10 +246,20 @@ export default function ServicesPage() {
             <p className="text-lg text-accent-light mb-8 leading-relaxed">
               From preventive care to advanced treatments, Cortex Hospital offers a full range of orthopaedic and gynecological services to support your health and well-being.
             </p>
-            <Button variant="secondary" size="large">
-              Make Appointment
-              <Image src="/images/img_arrowright.svg" alt="Arrow" width={24} height={24} className="ml-2" />
-            </Button>
+          <Link href="/contact" passHref>
+  <Button variant="secondary" size="large" asChild>
+    <span className="flex items-center">
+      Make Appointment
+      <Image
+        src="/images/img_arrowright.svg"
+        alt="Arrow"
+        width={24}
+        height={24}
+        className="ml-2"
+      />
+    </span>
+  </Button>
+</Link>
           </div>
         </div>
         
@@ -319,8 +290,8 @@ export default function ServicesPage() {
               <Card key={index} className={`p-8 hover:shadow-xl transition-all duration-300 ${
                 expandedCard === index ? 'md:col-span-3 lg:col-span-3' : ''
               }`}>
-                <div className="bg-[#0B1F44] p-6 rounded-lg w-16 h-16 mb-6 flex items-center justify-center">
-                  <Image src={service.icon} alt={service.title} width={32} height={32} />
+                <div className="bg-[#0B1F44] p-6 rounded-lg w-20 h-20 mb-6 flex items-center justify-center">
+                  <Image src={service.icon} alt={service.title} width={52} height={52} className='invert' />
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">{service.title}</h3>
                 <p className="text-gray-500 leading-relaxed mb-6">
@@ -389,8 +360,8 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Basic Services */}
             <Card className="p-8 hover:shadow-xl transition-all duration-300">
-              <div className="bg-[#0B1F44] p-6 rounded-lg w-16 h-16 mb-6 flex items-center justify-center">
-                <Image src="/images/img_users.svg" alt="Basic Services" width={32} height={32} />
+              <div className="bg-[#0B1F44] p-6 rounded-lg w-20 h-16 mb-6 flex items-center justify-center">
+                <Image src="/images/basic.png" alt="Basic Services" width={32} height={32} className='invert' />
               </div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">Basic Services</h3>
               <div className="space-y-4">
@@ -431,8 +402,8 @@ export default function ServicesPage() {
 
             {/* Ward & Nursing */}
             <Card className="p-8 hover:shadow-xl transition-all duration-300">
-              <div className="bg-[#0B1F44] p-6 rounded-lg w-16 h-16 mb-6 flex items-center justify-center">
-                <Image src="/images/img_whitening.svg" alt="Ward Services" width={32} height={32} />
+              <div className="bg-[#0B1F44] p-6 rounded-lg w-20 h-16 mb-6 flex items-center justify-center">
+                <Image src="/images/nursing.png" alt="Ward Services" width={32} height={32} className='invert' />
               </div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">Ward & Nursing</h3>
               <div className="space-y-4">
@@ -465,8 +436,8 @@ export default function ServicesPage() {
 
             {/* Surgery & Procedures */}
             <Card className="p-8 hover:shadow-xl transition-all duration-300">
-              <div className="bg-[#0B1F44] p-6 rounded-lg w-16 h-16 mb-6 flex items-center justify-center">
-                <Image src="/images/img_implant.svg" alt="Surgery Services" width={32} height={32} />
+              <div className="bg-[#0B1F44] p-6 rounded-lg w-20 h-16 mb-6 flex items-center justify-center">
+                <Image src="/images/surgery.png" alt="Surgery Services" width={32} height={32} className='invert' />
               </div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">Surgery & Procedures</h3>
               <div className="space-y-4">

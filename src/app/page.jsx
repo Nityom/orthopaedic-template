@@ -106,7 +106,7 @@ export default function HomePage() {
       <div className="space-y-8">
         <div className="flex items-start gap-6">
           <div className="bg-[#D4AF37] p-6 rounded-lg">
-            <Image src="/images/img_joint.svg" alt="Joint Replacement" width={44} height={44} />
+            <Image src="/images/ortho.png" alt="Joint Replacement" width={74} height={74} />
           </div>
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Joint Replacement & Spine Surgery</h3>
@@ -118,7 +118,7 @@ export default function HomePage() {
         <hr className="border-gray-300" />
         <div className="flex items-start gap-6">
           <div className="bg-[#D4AF37] p-6 rounded-lg">
-            <Image src="/images/img_women.svg" alt="Gynecology Services" width={44} height={44} />
+            <Image src="/images/care.png" alt="Gynecology Services" width={74} height={74} />
           </div>
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Maternity & Women's Health</h3>
@@ -130,7 +130,7 @@ export default function HomePage() {
         <hr className="border-gray-300" />
         <div className="flex items-start gap-6">
           <div className="bg-[#D4AF37] p-6 rounded-lg">
-            <Image src="/images/img_ortho.svg" alt="Trauma" width={44} height={44} />
+            <Image src="/images/traumaCare.png" alt="Trauma" width={74} height={74} />
           </div>
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Trauma Care & Pediatric Orthopedics</h3>
