@@ -2,6 +2,7 @@
 import React from 'react';
 import Button from '@/components/ui/Button';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const HeroSection = () => {
@@ -69,10 +70,12 @@ const HeroSection = () => {
               Experience world-class medical care with our expert teams in orthopaedics and gynecology. From joint replacements to women's health services, we're committed to providing comprehensive, compassionate care for your health needs.
             </motion.p>
             <motion.div variants={itemVariants}>
-              <Button variant="secondary" size="large">
-                Schedule Consultation
-                <Image src="/images/img_arrowright.svg" alt="Arrow" width={24} height={24} className="ml-2" />
-              </Button>
+              <Link href="/contact">
+                <Button variant="secondary" size="large">
+                  Schedule Consultation
+                  <Image src="/images/img_arrowright.svg" alt="Arrow" width={24} height={24} className="ml-2" />
+                </Button>
+              </Link>
             </motion.div>
           </motion.div>
           

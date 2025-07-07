@@ -98,7 +98,7 @@ export default function AboutPage() {
                 The Journey of Cortex Hospital
               </h2>
               <p className="text-gray-500 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
-                Founded in 2008, Cortex Hospital began with a clear mission: to provide comprehensive orthopaedic and gynecological care under one roof. Dr. Sarah Mitchell and Dr. Robert Chen started the practice with a focus on women's health and musculoskeletal wellness.
+                Founded in 2016, Cortex Hospital began with a clear mission: to provide comprehensive orthopaedic and gynecological care under one roof. Dr. Vipin Raut and Dr. Shilpa Raut started the practice with a focus on women's health and musculoskeletal wellness.
               </p>
               <p className="text-gray-500 text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
                 Today, we've evolved into a leading medical facility specializing in orthopaedic surgery and gynecological care, but our core mission remains unchanged - delivering personalized, compassionate care that helps patients achieve optimal health and well-being.
@@ -184,7 +184,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 max-w-6xl w-full">
               {[
                 { name: "Dr. Vipin Raut", specialty: "Orthopaedic Surgeon", image: "/images/doctor1.jpg" },
-                { name: "Dr. Smita Raut", specialty: "Gynecologist & Obstetrician", image: null },
+                { name: "Dr. Shilpa Raut", specialty: "Gynecologist & Obstetrician", image: null },
               ].map((doctor, index) => (
                 <Card key={index} className="bg-white rounded-lg overflow-hidden w-[40]">
                   <div className="bg-gray-900 h-56 sm:h-64 md:h-80 relative">
@@ -287,7 +287,7 @@ export default function AboutPage() {
                 image: "/images/patient1.png"
               },
               {
-                review :"I went to the gynecology department at Cortex Hospital for a check-up, and Dr. Smita Raut and her team were really kind and supportive. They made me feel comfortable and took my concerns seriously",
+                review :"I went to the gynecology department at Cortex Hospital for a check-up, and Dr. Shilpa Raut and her team were really kind and supportive. They made me feel comfortable and took my concerns seriously",
                 name: "Priya Patel",
                 title: "Gynac Patient",
                 image: "/images/patient3.png"

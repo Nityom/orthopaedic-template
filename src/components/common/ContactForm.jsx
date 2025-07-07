@@ -26,7 +26,7 @@ export default function ContactForm() {
       'Spine Issues',
       'Other Orthopaedic Issues'
     ],
-    'dr-smita-raut': [
+    'dr-shipla-raut': [
       'Pregnancy Care',
       'Gynecological Exam',
       'Menstrual Problems',
@@ -74,7 +74,7 @@ export default function ContactForm() {
     e.preventDefault();
     
     // Get form data
-    const doctorName = selectedDoctor === 'dr-vipin-raut' ? 'Dr. Vipin Raut - Orthopaedic Surgeon' : 'Dr. Smita Raut - Gynecologist & Obstetrician';
+    const doctorName = selectedDoctor === 'dr-vipin-raut' ? 'Dr. Vipin Raut - Orthopaedic Surgeon' : 'Dr. Shilpa Raut - Gynecologist & Obstetrician';
     
     // Get the actual problem text instead of the converted value
     const problemText = doctorProblems[selectedDoctor]?.find(problem => 
@@ -167,7 +167,7 @@ Please confirm this appointment. Thank you!`;
           >
             <option value="">Choose a doctor</option>
             <option value="dr-vipin-raut">Dr. Vipin Raut - Orthopaedic Surgeon</option>
-            <option value="dr-smita-raut">Dr. Smita Raut - Gynecologist & Obstetrician</option>
+            <option value="dr-shilpa-raut">Dr. Shilpa Raut - Gynecologist & Obstetrician</option>
           </select>
         </div>
         
