@@ -2,11 +2,7 @@
 const nextConfig = {
   productionBrowserSourceMaps: true,
   distDir: process.env.DIST_DIR || '.next',
-  output: 'export', // ✅ Enable static export
-
-  images: {
-    unoptimized: true, // ✅ Required for `next/image` to work with static export
-  },
+  // ❌ Removed: output: 'export' — allows image optimization to work
 
   webpack(config) {
     config.module.rules.push({
