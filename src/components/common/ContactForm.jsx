@@ -26,7 +26,7 @@ export default function ContactForm() {
       'Spine Issues',
       'Other Orthopaedic Issues'
     ],
-    'dr-shipla-raut': [
+    'dr-smita-raut': [
       'Pregnancy Care',
       'Gynecological Exam',
       'Menstrual Problems',
@@ -42,7 +42,7 @@ export default function ContactForm() {
 
   const handleDoctorChange = (e) => {
     setSelectedDoctor(e.target.value);
-    setSelectedProblem(''); // Reset problem selection when doctor changes
+    setSelectedProblem('');
   };
 
   const handleInputChange = (e) => {
@@ -53,10 +53,9 @@ export default function ContactForm() {
     }));
   };
 
-  // Function to check if date is Sunday
   const isDateDisabled = (date) => {
     const selectedDate = new Date(date);
-    return selectedDate.getDay() === 0; // Sunday is 0
+    return selectedDate.getDay() === 0;
   };
 
   const handleDateChange = (e) => {
@@ -73,47 +72,59 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Get form data
-    const doctorName = selectedDoctor === 'dr-vipin-raut' ? 'Dr. Vipin Raut - Orthopaedic Surgeon' : 'Dr. Shilpa Raut - Gynecologist & Obstetrician';
-    
-    // Get the actual problem text instead of the converted value
-    const problemText = doctorProblems[selectedDoctor]?.find(problem => 
-      problem.toLowerCase().replace(/\s+/g, '-') === selectedProblem
-    ) || 'Not specified';
-    
-    // Format the date for better readability
-    const formattedDate = formData.date ? new Date(formData.date).toLocaleDateString('en-IN', {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    }) : 'Not specified';
-    
-    // Format the message
-    const message = `*New Appointment Request - Cortex Hospital*
+    // Get doctor name
+    let doctorDisplayName = selectedDoctor;
+    if (selectedDoctor === 'dr-vipin-raut') {
+      doctorDisplayName = 'Dr. Vipin Raut - Orthopaedic Surgeon';
+    } else if (selectedDoctor === 'dr-smita-raut') {
+      doctorDisplayName = 'Dr. Smita Raut - Gynecologist & Obstetrician';
+    }
 
-*Patient Details:*
-Name: ${formData.fullName}
-Phone: ${formData.phone}
+    // Get problem name
+    let problemDisplayName = selectedProblem;
+    if (selectedDoctor && doctorProblems[selectedDoctor]) {
+      const foundProblem = doctorProblems[selectedDoctor].find(problem => 
+        problem.toLowerCase().replace(/\s+/g, '-') === selectedProblem
+      );
+      if (foundProblem) {
+        problemDisplayName = foundProblem;
+      }
+    }
 
-*Appointment Details:*
-Doctor: ${doctorName}
-Problem/Condition: ${problemText}
-Preferred Date: ${formattedDate}
-Preferred Time: ${formData.time}
+    // Create the message using the same format as reference
+    const message = `New Appointment Request - Cortex Hospital
+Name: ${formData.fullName || 'Not provided'}
+Phone: ${formData.phone || 'Not provided'}
+Doctor: ${doctorDisplayName || 'Not selected'}
+Problem: ${problemDisplayName || 'Not selected'}
+Date: ${formData.date || 'Not selected'}
+Time: ${formData.time || 'Not selected'}
 
-*Hospital:* Cortex Hospital, Wardha
-
+Hospital: Cortex Hospital, Wardha
 Please confirm this appointment. Thank you!`;
 
-    // WhatsApp number (remove + and spaces)
-    const whatsappNumber = '919373280505';
+    console.log('WhatsApp Message:', message);
     
-    // Create WhatsApp URL
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    // Try opening WhatsApp with simple message (same as reference)
+    const phoneNumber = "919373280505";
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
     
-    // Open WhatsApp
-    window.open(whatsappUrl, '_blank');
+    console.log('WhatsApp URL:', whatsappURL);
+    
+    // Try both methods (same as reference)
+    window.open(whatsappURL, '_blank');
+    
+    // Alternative method
+    setTimeout(() => {
+      const altURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      console.log('Alternative URL:', altURL);
+      window.open(altURL, '_blank');
+    }, 1000);
+
+    // Show fallback message to user after a delay
+    setTimeout(() => {
+      alert("If the message didn't appear automatically, please type your appointment confirmation manually in WhatsApp.");
+    }, 3000);
   };
 
   return (
@@ -122,7 +133,7 @@ Please confirm this appointment. Thank you!`;
       <form onSubmit={handleSubmit}>
         <div className="mb-6">
           <label htmlFor="fullName" className="block text-sm font-medium text-primary mb-2">
-            Full Name
+            Full Name *
           </label>
           <input
             type="text"
@@ -138,7 +149,7 @@ Please confirm this appointment. Thank you!`;
         
         <div className="mb-6">
           <label htmlFor="phone" className="block text-sm font-medium text-primary mb-2">
-            Phone Number
+            Phone Number *
           </label>
           <input
             type="tel"
@@ -148,15 +159,13 @@ Please confirm this appointment. Thank you!`;
             onChange={handleInputChange}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
             placeholder="Enter your phone number"
-            pattern="[0-9]{10}"
-            title="Please enter a valid 10-digit phone number"
             required
           />
         </div>
         
         <div className="mb-6">
           <label htmlFor="doctor" className="block text-sm font-medium text-primary mb-2">
-            Select Doctor
+            Select Doctor *
           </label>
           <select
             id="doctor"
@@ -167,13 +176,13 @@ Please confirm this appointment. Thank you!`;
           >
             <option value="">Choose a doctor</option>
             <option value="dr-vipin-raut">Dr. Vipin Raut - Orthopaedic Surgeon</option>
-            <option value="dr-shilpa-raut">Dr. Shilpa Raut - Gynecologist & Obstetrician</option>
+            <option value="dr-smita-raut">Dr. Smita Raut - Gynecologist & Obstetrician</option>
           </select>
         </div>
         
         <div className="mb-6">
           <label htmlFor="problem" className="block text-sm font-medium text-primary mb-2">
-            Select Problem/Condition
+            Select Problem/Condition *
           </label>
           <select
             id="problem"
@@ -197,7 +206,7 @@ Please confirm this appointment. Thank you!`;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div>
             <label htmlFor="date" className="block text-sm font-medium text-primary mb-2">
-              Preferred Date
+              Preferred Date *
             </label>
             <input
               type="date"
@@ -213,7 +222,7 @@ Please confirm this appointment. Thank you!`;
           </div>
           <div>
             <label htmlFor="time" className="block text-sm font-medium text-primary mb-2">
-              Preferred Time
+              Preferred Time *
             </label>
             <select
               id="time"

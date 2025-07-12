@@ -184,7 +184,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 max-w-6xl w-full">
               {[
                 { name: "Dr. Vipin Raut", specialty: "Orthopaedic Surgeon", image: "/images/doctor1.jpg" },
-                { name: "Dr. Shilpa Raut", specialty: "Gynecologist & Obstetrician", image: null },
+                { name: "Dr. Smita Raut", specialty: "Gynecologist & Obstetrician", image: "/images/doctor2.jpg" },
               ].map((doctor, index) => (
                 <Card key={index} className="bg-white rounded-lg overflow-hidden w-[40]">
                   <div className="bg-gray-900 h-56 sm:h-64 md:h-80 relative">
