@@ -115,7 +115,7 @@ export default function TermsPage() {
               <p className="text-gray-700 mb-2">123 Medical Plaza, Healthcare District</p>
               <p className="text-gray-700 mb-2">City 12345, United States</p>
               <p className="text-gray-700 mb-2">Phone: +1 (555) 123-4567</p>
-              <p className="text-gray-700">Email: legal@cortexhospital.com</p>
+              <p className="text-gray-700">Email: drvipeenraut@cortexhospital.com</p>
             </div>
 
             <h2 className="text-3xl font-semibold text-gray-900 mb-6">10. Governing Law</h2>

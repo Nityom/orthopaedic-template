@@ -102,8 +102,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
                     <p className="text-gray-500">
-                      info@cortexhospital.com<br />
-                      appointments@cortexhospital.com
+                      drvipeenraut@cortexhospital.com<br />
+                      drshillparaut@cortexhospital.com
                     </p>
                   </div>
                 </div>

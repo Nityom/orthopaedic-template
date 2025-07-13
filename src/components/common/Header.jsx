@@ -47,13 +47,17 @@ const Header = () => {
               <span className="text-primary text-xs md:text-sm">+91 9373280505</span>
             </motion.div>
             <div className="w-px h-4 bg-primary hidden md:block"></div>
-            <motion.div 
-              className="flex items-center gap-1 md:gap-2"
-              variants={navItemAnimation}
-            >
-              <Image src="/images/img_mail.svg" alt="Email" width={16} height={16} />
-              <span className="text-primary text-xs md:text-sm">info@cortexhospital.com</span>
-            </motion.div>
+      <motion.div 
+        className="flex items-center gap-1 md:gap-2"
+        variants={navItemAnimation}
+      >
+        <Image src="/images/img_mail.svg" alt="Email" width={16} height={16} />
+        <div className="text-primary text-xs md:text-sm">
+          <span>drvipeenraut@cortexhospital.com</span>
+          <span className="hidden lg:inline"> | </span>
+          <span className="lg:inline block">drshillparaut@cortexhospital.com</span>
+        </div>
+      </motion.div>
           </div>
         </div>
       </motion.div>

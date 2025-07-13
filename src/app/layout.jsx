@@ -69,7 +69,7 @@ export default function RootLayout({ children }) {
               "description": "Top orthopaedic and gynecological hospital in Wardha providing expert medical care",
               "url": "https://cortexhospital.com",
               "telephone": "+91 9373280505",
-              "email": "info@cortexhospital.com",
+              "email": "drvipeenraut@cortexhospital.com",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Beside Urich Mall, Aarti Square, Mohini Nagar, Nagpur Road",

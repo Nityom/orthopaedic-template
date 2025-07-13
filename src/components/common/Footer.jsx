@@ -132,9 +132,10 @@ const Footer = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                   </svg>
                 </div>
-                <p className="text-accent-light text-sm md:text-base">
-                  info@cortexhospital.com
-                </p>
+                <div className="text-accent-light text-sm md:text-base">
+                  <p>drvipeenraut@cortexhospital.com</p>
+                  <p>drshillparaut@cortexhospital.com</p>
+                </div>
               </div>
 
               {/* Hours */}
