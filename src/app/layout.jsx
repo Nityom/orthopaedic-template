@@ -14,7 +14,7 @@ const siteMetadata = {
   openGraph: {
     title: 'Cortex Hospital - Top Orthopaedic & Gynecological Hospital in Wardha',
     description: 'Leading healthcare facility in Wardha with expert orthopaedic and gynecological care. Dr. Vipin Raut - Top Orthopaedic Surgeon, Dr. Shillpa Raut - Expert Gynecologist.',
-    url: 'https://cortexhospital.com',
+    url: 'https://www.cortexhospital.com/',
     siteName: 'Cortex Hospital',
     locale: 'en_US',
     type: 'website',
@@ -67,7 +67,7 @@ export default function RootLayout({ children }) {
               "@type": "Hospital",
               "name": "Cortex Hospital",
               "description": "Top orthopaedic and gynecological hospital in Wardha providing expert medical care",
-              "url": "https://cortexhospital.com",
+              "url": "https://www.cortexhospital.com/",
               "telephone": "+91 9373280505",
               "email": "drvipeenraut@cortexhospital.com",
               "address": {
@@ -82,7 +82,7 @@ export default function RootLayout({ children }) {
                 "Mo-Sa 10:00-13:00",
                 "Mo-Sa 18:00-19:30"
               ],
-              "medicalSpecialty": ["Orthopedics", "Gynecology", "Obstetrics"],
+              "medicalSpecialty": ["Orthopedics", "Gynecology"],
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
                 "name": "Medical Services",
@@ -133,7 +133,7 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="/favicon.ico" sizes="180x180" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://cortexhospital.com" />
+        <link rel="canonical" href="https://www.cortexhospital.com/" />
       </head>
       <body>
         {children}
