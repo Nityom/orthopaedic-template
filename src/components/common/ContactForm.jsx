@@ -26,7 +26,7 @@ export default function ContactForm() {
       'Spine Issues',
       'Other Orthopaedic Issues'
     ],
-    'dr-smita-raut': [
+    'dr-shillpa-raut': [
       'Pregnancy Care',
       'Gynecological Exam',
       'Menstrual Problems',
@@ -76,8 +76,8 @@ export default function ContactForm() {
     let doctorDisplayName = selectedDoctor;
     if (selectedDoctor === 'dr-vipin-raut') {
       doctorDisplayName = 'Dr. Vipin Raut - Orthopaedic Surgeon';
-    } else if (selectedDoctor === 'dr-smita-raut') {
-      doctorDisplayName = 'Dr. Smita Raut - Gynecologist & Obstetrician';
+    } else if (selectedDoctor === 'dr-shillpa-raut') {
+      doctorDisplayName = 'Dr. Shillpa Raut - Gynecologist & Obstetrician';
     }
 
     // Get problem name
@@ -176,7 +176,7 @@ Please confirm this appointment. Thank you!`;
           >
             <option value="">Choose a doctor</option>
             <option value="dr-vipin-raut">Dr. Vipin Raut - Orthopaedic Surgeon</option>
-            <option value="dr-smita-raut">Dr. Smita Raut - Gynecologist & Obstetrician</option>
+            <option value="dr-shillpa-raut">Dr. Shillpa Raut - Gynecologist & Obstetrician</option>
           </select>
         </div>
         

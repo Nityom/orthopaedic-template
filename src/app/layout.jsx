@@ -7,13 +7,13 @@ import '../styles/index.css';
 // Metadata is moved to a separate constant since we're using 'use client'
 const siteMetadata = {
   title: 'Cortex Hospital - Top Orthopaedic & Gynecological Hospital in Wardha | Dr. Vipin Raut',
-  description: 'Leading orthopaedic and gynecological care in Wardha. Expert treatment for bone, joint, and women\'s health issues with advanced technology and compassionate care by Dr. Vipin Raut and Dr. Shilpa Raut.',
-  keywords: 'top orthopaedic hospital wardha, best orthopaedic doctor, Dr. Vipin Raut, Dr. Shilpa Raut, gynecologist wardha, cortex hospital, joint replacement, spine surgery, bone fracture treatment, women health care wardha',
+  description: 'Leading orthopaedic and gynecological care in Wardha. Expert treatment for bone, joint, and women\'s health issues with advanced technology and compassionate care by Dr. Vipin Raut and Dr. Shillpa Raut.',
+  keywords: 'top orthopaedic hospital wardha, best orthopaedic doctor, Dr. Vipin Raut, Dr. Shillpa Raut, gynecologist wardha, cortex hospital, joint replacement, spine surgery, bone fracture treatment, women health care wardha',
   author: 'Cortex Hospital',
   robots: 'index, follow',
   openGraph: {
     title: 'Cortex Hospital - Top Orthopaedic & Gynecological Hospital in Wardha',
-    description: 'Leading healthcare facility in Wardha with expert orthopaedic and gynecological care. Dr. Vipin Raut - Top Orthopaedic Surgeon, Dr. Shilpa Raut - Expert Gynecologist.',
+    description: 'Leading healthcare facility in Wardha with expert orthopaedic and gynecological care. Dr. Vipin Raut - Top Orthopaedic Surgeon, Dr. Shillpa Raut - Expert Gynecologist.',
     url: 'https://cortexhospital.com',
     siteName: 'Cortex Hospital',
     locale: 'en_US',
@@ -112,7 +112,7 @@ export default function RootLayout({ children }) {
                 },
                 {
                   "@type": "Physician",
-                  "name": "Dr. Shilpa Raut",
+                  "name": "Dr. Shillpa Raut",
                   "medicalSpecialty": "Gynecology and Obstetrics",
                   "description": "Expert gynecologist providing comprehensive women's healthcare"
                 }

@@ -98,7 +98,7 @@ export default function AboutPage() {
                 The Journey of Cortex Hospital
               </h2>
               <p className="text-gray-500 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
-                Founded in 2016, Cortex Hospital began with a clear mission: to provide comprehensive orthopaedic and gynecological care under one roof. Dr. Vipin Raut and Dr. Shilpa Raut started the practice with a focus on women's health and musculoskeletal wellness.
+                Founded in 2016, Cortex Hospital began with a clear mission: to provide comprehensive orthopaedic and gynecological care under one roof. Dr. Vipin Raut and Dr. Shillpa Raut started the practice with a focus on women's health and musculoskeletal wellness.
               </p>
               <p className="text-gray-500 text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
                 Today, we've evolved into a leading medical facility specializing in orthopaedic surgery and gynecological care, but our core mission remains unchanged - delivering personalized, compassionate care that helps patients achieve optimal health and well-being.
@@ -183,8 +183,20 @@ export default function AboutPage() {
           <div className="flex justify-center">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 max-w-6xl w-full">
               {[
-                { name: "Dr. Vipin Raut", specialty: "Orthopaedic Surgeon", image: "/images/doctor1.jpg" },
-                { name: "Dr. Smita Raut", specialty: "Gynecologist & Obstetrician", image: "/images/doctor2.jpg" },
+                { 
+                  name: "Dr. Vipin Raut", 
+                  specialty: "Orthopaedic Surgeon", 
+                  image: "/images/doctor1.jpg",
+                  facebook: "https://www.facebook.com/vipeen.raut/",
+                  instagram: "https://www.instagram.com/vipeen_ortho?igsh=Z21vdXpmd3lscDU2"
+                },
+                { 
+                  name: "Dr. Shillpa Raut", 
+                  specialty: "Gynecologist & Obstetrician", 
+                  image: "/images/doctor2.jpg",
+                  facebook: "https://www.facebook.com/shillparaut9/",
+                  instagram: "https://www.instagram.com/shillparaut"
+                },
               ].map((doctor, index) => (
                 <Card key={index} className="bg-white rounded-lg overflow-hidden w-[40]">
                   <div className="bg-gray-900 h-56 sm:h-64 md:h-80 relative">
@@ -205,12 +217,22 @@ export default function AboutPage() {
                     <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2 sm:mb-3">{doctor.name}</h3>
                     <p className="text-accent text-base sm:text-lg mb-4 sm:mb-6">{doctor.specialty}</p>
                     <div className="flex gap-3">
-                      <div className="bg-accent p-2 sm:p-3 rounded-lg">
+                      <a 
+                        href={doctor.facebook} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="bg-accent p-2 sm:p-3 rounded-lg hover:bg-accent-dark transition-colors"
+                      >
                         <Image src="/images/img_facebook.svg" alt="Facebook" width={20} height={20} />
-                      </div>
-                      <div className="bg-accent p-2 sm:p-3 rounded-lg">
-                        <Image src="/images/img_linkedin.svg" alt="LinkedIn" width={20} height={20} />
-                      </div>
+                      </a>
+                      <a 
+                        href={doctor.instagram} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="bg-accent p-2 sm:p-3 rounded-lg hover:bg-accent-dark transition-colors"
+                      >
+                        <Image src="/images/insta.svg" alt="Instagram" width={20} height={20} color='invert' />
+                      </a>
                     </div>
                   </div>
                 </Card>
@@ -287,7 +309,7 @@ export default function AboutPage() {
                 image: "/images/patient1.png"
               },
               {
-                review :"I went to the gynecology department at Cortex Hospital for a check-up, and Dr. Shilpa Raut and her team were really kind and supportive. They made me feel comfortable and took my concerns seriously",
+                review :"I went to the gynecology department at Cortex Hospital for a check-up, and Dr. Shillpa Raut and her team were really kind and supportive. They made me feel comfortable and took my concerns seriously",
                 name: "Priya Patel",
                 title: "Gynac Patient",
                 image: "/images/patient3.png"
