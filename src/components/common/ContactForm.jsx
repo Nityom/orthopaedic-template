@@ -235,19 +235,54 @@ Please confirm this appointment. Thank you!`;
               <option value="">Select time</option>
               <optgroup label="Morning (10:00 AM - 1:00 PM)">
                 <option value="10:00 AM">10:00 AM</option>
+                <option value="10:15 AM">10:15 AM</option>
                 <option value="10:30 AM">10:30 AM</option>
+                <option value="10:45 AM">10:45 AM</option>
                 <option value="11:00 AM">11:00 AM</option>
+                <option value="11:15 AM">11:15 AM</option>
                 <option value="11:30 AM">11:30 AM</option>
+                <option value="11:45 AM">11:45 AM</option>
                 <option value="12:00 PM">12:00 PM</option>
+                <option value="12:15 PM">12:15 PM</option>
                 <option value="12:30 PM">12:30 PM</option>
+                <option value="12:45 PM">12:45 PM</option>
               </optgroup>
-              <optgroup label="Evening (6:00 PM - 7:30 PM)">
-                <option value="6:00 PM">6:00 PM</option>
-                <option value="6:30 PM">6:30 PM</option>
-                <option value="7:00 PM">7:00 PM</option>
-                <option value="7:30 PM">7:30 PM</option>
-              </optgroup>
+              {(() => {
+                const selectedDate = new Date(formData.date);
+                const isSaturday = selectedDate.getDay() === 6;
+                const isOrthoDoctor = selectedDoctor === 'dr-vipin-raut';
+                
+                // Show evening slots if it's not Saturday OR if it's Saturday but not ortho doctor
+                if (!isSaturday || !isOrthoDoctor) {
+                  return (
+                    <optgroup label="Evening (6:00 PM - 7:30 PM)">
+                      <option value="6:00 PM">6:00 PM</option>
+                      <option value="6:15 PM">6:15 PM</option>
+                      <option value="6:30 PM">6:30 PM</option>
+                      <option value="6:45 PM">6:45 PM</option>
+                      <option value="7:00 PM">7:00 PM</option>
+                      <option value="7:15 PM">7:15 PM</option>
+                      <option value="7:30 PM">7:30 PM</option>
+                    </optgroup>
+                  );
+                }
+                return null;
+              })()}
             </select>
+            {(() => {
+              const selectedDate = new Date(formData.date);
+              const isSaturday = selectedDate.getDay() === 6;
+              const isOrthoDoctor = selectedDoctor === 'dr-vipin-raut';
+              
+              if (isSaturday && isOrthoDoctor) {
+                return (
+                  <p className="text-sm text-orange-600 mt-1">
+                    *Orthopaedic services are closed on Saturday evenings
+                  </p>
+                );
+              }
+              return null;
+            })()}
           </div>
         </div>
         
