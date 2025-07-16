@@ -58,7 +58,7 @@ const Footer = () => {
               className="text-accent-light leading-relaxed text-sm md:text-base max-w-md"
               variants={navItemAnimation}
             >
-              Leading the way in orthopaedic and gynecological care. We provide comprehensive medical services with advanced technology and compassionate care to help you achieve optimal health and wellness.
+              Leading the way in orthopaedic, Obstetric and gynecological care. We provide comprehensive medical services with advanced technology and compassionate care to help you achieve optimal health and wellness.
             </motion.p>
 
             {/* Social Media Icons */}

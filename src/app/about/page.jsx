@@ -15,78 +15,78 @@ export default function AboutPage() {
       <ScrollToTop />
         {/* Hero Section */}
       <section className="bg-primary text-white py-12 md:py-16 lg:py-20 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <motion.div 
-            className="max-w-2xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <motion.p 
-              className="text-lg md:text-xl font-semibold mb-3 md:mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-            >
-              About Us
-            </motion.p>
-            <motion.h1 
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold mb-4 md:mb-6 leading-tight"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-            >
-              Cortex Hospital: Excellence in Orthopaedic & Gynecology Care
-            </motion.h1>
-            <motion.p 
-              className="text-base md:text-lg text-gray-300 mb-6 md:mb-8 leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-            >
-              With over 15 years of experience, Cortex Hospital has been delivering exceptional orthopaedic and gynecological care, helping patients achieve optimal health and quality of life.
-            </motion.p>
-          </motion.div>
-        </div>
-        
-        {/* Decorative Elements */}
-        <motion.div 
-          className="hidden md:block absolute top-0 right-0 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-white opacity-10"
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 0.1 }}
-          transition={{ duration: 0.8 }}
-        ></motion.div>
-        <motion.div 
-          className="hidden md:block absolute top-16 md:top-24 lg:top-32 right-16 md:right-24 lg:right-32 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-white opacity-5"
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 0.05 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        ></motion.div>
-        <motion.div 
-          className="hidden md:block absolute top-32 md:top-48 lg:top-64 right-0 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-white opacity-20"
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 0.2 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        ></motion.div>
-        <motion.div 
-          className="absolute bottom-0 right-0 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-primary-light"
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        ></motion.div>
-        <motion.div 
-          className="absolute bottom-0 right-16 md:right-24 lg:right-32 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-accent"
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        ></motion.div>
-        <motion.div 
-          className="absolute bottom-16 md:bottom-24 lg:bottom-32 right-0 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-accent-dark"
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        ></motion.div>
-      </section>
+  <div className="max-w-7xl mx-auto px-4 relative z-10">
+    <motion.div 
+      className="w-full"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      <motion.p 
+        className="text-lg md:text-xl font-semibold mb-3 md:mb-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+      >
+        About Us
+      </motion.p>
+      <motion.h1 
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold mb-4 md:mb-6 leading-tight"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.6 }}
+      >
+        Cortex Hospital: Excellence in Orthopaedic, Obstetric & Gynecological Care
+      </motion.h1>
+      <motion.p 
+        className="text-base md:text-lg text-gray-300 mb-6 md:mb-8 leading-relaxed max-w-2xl"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.6, duration: 0.6 }}
+      >
+        With over 15 years of experience, Cortex Hospital has been delivering exceptional orthopaedic, Obstetric and gynecological care, helping patients achieve optimal health and quality of life.
+      </motion.p>
+    </motion.div>
+  </div>
+  
+  {/* Decorative Elements */}
+  <motion.div 
+    className="hidden md:block absolute top-0 right-0 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-white opacity-10"
+    initial={{ x: 100, opacity: 0 }}
+    animate={{ x: 0, opacity: 0.1 }}
+    transition={{ duration: 0.8 }}
+  ></motion.div>
+  <motion.div 
+    className="hidden md:block absolute top-16 md:top-24 lg:top-32 right-16 md:right-24 lg:right-32 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-white opacity-5"
+    initial={{ x: 100, opacity: 0 }}
+    animate={{ x: 0, opacity: 0.05 }}
+    transition={{ duration: 0.8, delay: 0.2 }}
+  ></motion.div>
+  <motion.div 
+    className="hidden md:block absolute top-32 md:top-48 lg:top-64 right-0 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-white opacity-20"
+    initial={{ x: 100, opacity: 0 }}
+    animate={{ x: 0, opacity: 0.2 }}
+    transition={{ duration: 0.8, delay: 0.4 }}
+  ></motion.div>
+  <motion.div 
+    className="absolute bottom-0 right-0 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-primary-light"
+    initial={{ y: 100, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{ duration: 0.8 }}
+  ></motion.div>
+  <motion.div 
+    className="absolute bottom-0 right-16 md:right-24 lg:right-32 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-accent"
+    initial={{ y: 100, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{ duration: 0.8, delay: 0.2 }}
+  ></motion.div>
+  <motion.div 
+    className="absolute bottom-16 md:bottom-24 lg:bottom-32 right-0 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-accent-dark"
+    initial={{ y: 100, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{ duration: 0.8, delay: 0.4 }}
+  ></motion.div>
+</section>
       
       {/* Our Story Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
@@ -98,7 +98,7 @@ export default function AboutPage() {
                 The Journey of Cortex Hospital
               </h2>
               <p className="text-gray-500 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
-                Founded in 2016, Cortex Hospital began with a clear mission: to provide comprehensive orthopaedic and gynecological care under one roof. Dr. Vipin Raut and Dr. Shillpa Raut started the practice with a focus on women's health and musculoskeletal wellness.
+                Founded in 2016, Cortex Hospital began with a clear mission: to provide comprehensive orthopaedic, Obstetric and gynecological care under one roof. Dr. vipeen Raut and Dr. Shillpa Raut started the practice with a focus on women's health and musculoskeletal wellness.
               </p>
               <p className="text-gray-500 text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
                 Today, we've evolved into a leading medical facility specializing in orthopaedic surgery and gynecological care, but our core mission remains unchanged - delivering personalized, compassionate care that helps patients achieve optimal health and well-being.
@@ -184,7 +184,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 max-w-6xl w-full">
               {[
                 { 
-                  name: "Dr. Vipin Raut", 
+                  name: "Dr. vipeen Raut", 
                   specialty: "Orthopaedic Surgeon", 
                   image: "/images/doctor1.jpg",
                   facebook: "https://www.facebook.com/vipeen.raut/",
@@ -303,7 +303,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
               {
-                review: "Dr. Vipin Raut performed my knee replacement surgery with exceptional skill. The entire orthopaedic team was professional and caring throughout my recovery. I'm now pain-free and back to my daily activities. Highly recommended!",
+                review: "Dr. vipeen Raut performed my knee replacement surgery with exceptional skill. The entire orthopaedic team was professional and caring throughout my recovery. I'm now pain-free and back to my daily activities. Highly recommended!",
                 name: "Rajesh Sharma",
                 title: "Knee Surgery Patient",
                 image: "/images/patient1.png"

@@ -14,7 +14,7 @@ export default function ContactForm() {
   });
 
   const doctorProblems = {
-    'dr-vipin-raut': [
+    'dr-vipeen-raut': [
       'Knee Pain',
       'Back Pain',
       'Shoulder Pain',
@@ -74,8 +74,8 @@ export default function ContactForm() {
     
     // Get doctor name
     let doctorDisplayName = selectedDoctor;
-    if (selectedDoctor === 'dr-vipin-raut') {
-      doctorDisplayName = 'Dr. Vipin Raut - Orthopaedic Surgeon';
+    if (selectedDoctor === 'dr-vipeen-raut') {
+      doctorDisplayName = 'Dr. vipeen Raut - Orthopaedic Surgeon';
     } else if (selectedDoctor === 'dr-shillpa-raut') {
       doctorDisplayName = 'Dr. Shillpa Raut - Gynecologist & Obstetrician';
     }
@@ -175,7 +175,7 @@ Please confirm this appointment. Thank you!`;
             required
           >
             <option value="">Choose a doctor</option>
-            <option value="dr-vipin-raut">Dr. Vipin Raut - Orthopaedic Surgeon</option>
+            <option value="dr-vipeen-raut">Dr. vipeen Raut - Orthopaedic Surgeon</option>
             <option value="dr-shillpa-raut">Dr. Shillpa Raut - Gynecologist & Obstetrician</option>
           </select>
         </div>
@@ -250,7 +250,7 @@ Please confirm this appointment. Thank you!`;
               {(() => {
                 const selectedDate = new Date(formData.date);
                 const isSaturday = selectedDate.getDay() === 6;
-                const isOrthoDoctor = selectedDoctor === 'dr-vipin-raut';
+                const isOrthoDoctor = selectedDoctor === 'dr-vipeen-raut';
                 
                 // Show evening slots if it's not Saturday OR if it's Saturday but not ortho doctor
                 if (!isSaturday || !isOrthoDoctor) {
@@ -272,7 +272,7 @@ Please confirm this appointment. Thank you!`;
             {(() => {
               const selectedDate = new Date(formData.date);
               const isSaturday = selectedDate.getDay() === 6;
-              const isOrthoDoctor = selectedDoctor === 'dr-vipin-raut';
+              const isOrthoDoctor = selectedDoctor === 'dr-vipeen-raut';
               
               if (isSaturday && isOrthoDoctor) {
                 return (

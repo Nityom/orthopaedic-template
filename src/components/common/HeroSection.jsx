@@ -61,7 +61,7 @@ const HeroSection = () => {
               className="text-5xl lg:text-7xl font-semibold mb-6 leading-tight"
               variants={itemVariants}
             >
-              Excellence in Orthopaedic & Gynecology Care
+              Excellence in Orthopaedic, Obstetric & Gynecological Care
             </motion.h1>
             <motion.p 
               className="text-lg text-accent-light mb-8 leading-relaxed"

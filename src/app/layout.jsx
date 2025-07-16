@@ -6,14 +6,14 @@ import '../styles/index.css';
 
 // Metadata is moved to a separate constant since we're using 'use client'
 const siteMetadata = {
-  title: 'Cortex Hospital - Top Orthopaedic & Gynecological Hospital in Wardha | Dr. Vipin Raut',
-  description: 'Leading orthopaedic and gynecological care in Wardha. Expert treatment for bone, joint, and women\'s health issues with advanced technology and compassionate care by Dr. Vipin Raut and Dr. Shillpa Raut.',
-  keywords: 'top orthopaedic hospital wardha, best orthopaedic doctor, Dr. Vipin Raut, Dr. Shillpa Raut, gynecologist wardha, cortex hospital, joint replacement, spine surgery, bone fracture treatment, women health care wardha',
+  title: 'Cortex Hospital - Top Orthopaedic, Obstetric & Gynecological Hospital in Wardha | Dr. vipeen Raut',
+  description: 'Leading orthopaedic, obstetric and gynecological care in Wardha. Expert treatment for bone, joint, and women\'s health issues with advanced technology and compassionate care by Dr. vipeen Raut and Dr. Shillpa Raut.',
+  keywords: 'top orthopaedic hospital wardha, best orthopaedic doctor, Dr. vipeen Raut, Dr. Shillpa Raut, gynecologist wardha, obstetric care wardha, cortex hospital, joint replacement, spine surgery, bone fracture treatment, women health care wardha, maternity care wardha',
   author: 'Cortex Hospital',
   robots: 'index, follow',
   openGraph: {
-    title: 'Cortex Hospital - Top Orthopaedic & Gynecological Hospital in Wardha',
-    description: 'Leading healthcare facility in Wardha with expert orthopaedic and gynecological care. Dr. Vipin Raut - Top Orthopaedic Surgeon, Dr. Shillpa Raut - Expert Gynecologist.',
+    title: 'Cortex Hospital - Top Orthopaedic, Obstetric & Gynecological Hospital in Wardha',
+    description: 'Leading healthcare facility in Wardha with expert orthopaedic, Obstetric and gynecological care. Dr. vipeen Raut - Top Orthopaedic Surgeon, Dr. Shillpa Raut - Expert Gynecologist.',
     url: 'https://www.cortexhospital.com/',
     siteName: 'Cortex Hospital',
     locale: 'en_US',
@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Hospital",
               "name": "Cortex Hospital",
-              "description": "Top orthopaedic and gynecological hospital in Wardha providing expert medical care",
+              "description": "Top orthopaedic, Obstetric and gynecological hospital in Wardha providing expert medical care",
               "url": "https://www.cortexhospital.com/",
               "telephone": "+91 9373280505",
               "email": "drvipeenraut@cortexhospital.com",
@@ -82,7 +82,7 @@ export default function RootLayout({ children }) {
                 "Mo-Sa 10:00-13:00",
                 "Mo-Sa 18:00-19:30"
               ],
-              "medicalSpecialty": ["Orthopedics", "Gynecology"],
+              "medicalSpecialty": ["Orthopedics", "Obstetrics", "Gynecology"],
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
                 "name": "Medical Services",
@@ -106,7 +106,7 @@ export default function RootLayout({ children }) {
               "physician": [
                 {
                   "@type": "Physician",
-                  "name": "Dr. Vipin Raut",
+                  "name": "Dr. vipeen Raut",
                   "medicalSpecialty": "Orthopedic Surgery",
                   "description": "Top orthopaedic surgeon in Wardha specializing in joint replacement and spine surgery"
                 },

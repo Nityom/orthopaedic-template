@@ -21,10 +21,10 @@ export default function HomePage() {
             <div className="w-full lg:w-1/2 order-2 lg:order-2 mb-6 lg:mb-0">
               <p className="text-accent font-medium mb-3">About Us</p>
               <h2 className="text-2xl sm:text-3xl lg:text-5xl font-semibold text-primary mb-3 sm:mb-5 leading-tight">
-                Cortex Hospital - Excellence in Orthopaedic & Gynecology Care
+                Cortex Hospital - Excellence in Orthopaedic, Obstetric & Gynecological Care
               </h2>
               <p className="text-secondary-dark text-sm sm:text-base mb-5 leading-relaxed">
-                At Cortex Hospital, we specialize in providing world-class orthopaedic and gynecological care. Our multidisciplinary team combines advanced medical expertise with compassionate care to serve women's health needs and musculoskeletal wellness.
+                At Cortex Hospital, we specialize in providing world-class orthopaedic, obstetric and gynecological care. Our multidisciplinary team combines advanced medical expertise with compassionate care to serve women's health needs and musculoskeletal wellness.
               </p>
               <div className="grid grid-cols-1 gap-4 mb-6">
                 <div className="flex items-start gap-3">
@@ -40,10 +40,12 @@ export default function HomePage() {
                   <div className="bg-[#D4AF37] p-2.5 rounded-lg flex-shrink-0">
                     <Image src="/images/img_thumbsup.svg" alt="Advanced Treatment" width={20} height={20} className="invert" />
                   </div>
-                  <div>
-                    <h3 className="text-base sm:text-lg font-semibold text-primary mb-1">Comprehensive Gynecology</h3>
-                    <p className="text-secondary-dark text-xs sm:text-sm">Complete women's health services and reproductive care.</p>
-                  </div>
+                
+<div>
+  <h3 className="text-base sm:text-lg font-semibold text-primary mb-1">Comprehensive Obstetric & Gynecology</h3>
+  <p className="text-secondary-dark text-xs sm:text-sm">Complete women's health services, maternity care, and reproductive health.</p>
+</div>
+
                 </div>
               </div>
             </div>
@@ -69,13 +71,13 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-5xl font-semibold text-white mb-6">Cortex Hospital Statistics</h2>
-              <p className="text-accent-light text-lg max-w-3xl mx-auto">
-                Purus turpis vivamus sem est blandit. In at egestas id sollicitudin mattis integer aliquet ut tempor. Risus enim nisi ipsum imperdiet. Sed turpis tellus quisque tellus ipsum malesuada fringilla amet elit.
-              </p>
+             <p className="text-accent-light text-lg max-w-3xl mx-auto">
+  Our commitment to excellence in orthopaedic, Obstetric and gynecological care is reflected in our proven track record of successful treatments, patient satisfaction, and medical achievements over the years.
+</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <h3 className="text-7xl font-semibold text-accent mb-4">5K+</h3>
+                <h3 className="text-7xl font-semibold text-accent mb-4">50K+</h3>
                 <p className="text-accent-light text-lg">Happy Patients</p>
               </div>
               <div>
@@ -97,10 +99,10 @@ export default function HomePage() {
       <div>
         <p className="text-accent font-medium mb-4">Our Services</p>
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6 leading-tight">
-          Comprehensive Orthopaedic & Gynecological Care
+       Comprehensive Orthopaedic, Obstetric & Gynecological Care
         </h2>
         <p className="text-gray-500 text-sm sm:text-base lg:text-lg mb-8 leading-relaxed">
-          At Cortex Hospital, we bring together expert orthopaedic and gynecological care under one roof. From joint replacements and trauma surgery to maternity and fertility care, we provide holistic and personalized health solutions.
+          At Cortex Hospital, we bring together expert orthopaedic, Obstetric and gynecological care under one roof. From joint replacements and trauma surgery to maternity and fertility care, we provide holistic and personalized health solutions.
         </p>
       </div>
       <div className="space-y-8">
@@ -165,9 +167,9 @@ export default function HomePage() {
               <div className="mb-8">
                 <Image src="/images/img_icon.svg" alt="Quote icon" width={67} height={84} />
               </div>
-              <p className="text-[#D4AF37] text-lg mb-8 leading-relaxed">
-                "The orthopaedic team at Cortex Hospital gave me my life back after my knee replacement. The gynecology department also provided excellent care during my treatment. I couldn't be happier with the professional and compassionate service."
-              </p>
+             <p className="text-[#D4AF37] text-lg mb-8 leading-relaxed">
+  "Honestly, I thought my sports days were over after my ACL injury. But the orthopaedic team at Cortex Hospital was amazing! They got me back on the field stronger than ever. The whole experience was smooth and the recovery was way faster than I expected. Totally recommend!"
+</p>
               <div className="flex items-center gap-4">
                 
                              <div className="flex items-center gap-4">

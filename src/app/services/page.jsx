@@ -143,16 +143,32 @@ export default function ServicesPage() {
     },
     {
       icon: "/images/xray.png",
-      title: "Digital X-ray & Pregnancy Care",
-      description: "Advanced digital imaging and comprehensive antenatal and postnatal care for expectant mothers.",
+      title: "Digital X-ray Services",
+      description: "Advanced digital imaging technology for accurate diagnosis with reduced radiation exposure and immediate results.",
       additionalInfo: {
         features: [
           "Digital X-ray systems",
-          "Antenatal checkups",
-          "Postnatal care",
-          "Pregnancy monitoring"
+          "Immediate image processing",
+          "Reduced radiation exposure",
+          "High-resolution imaging",
+          "Digital storage and retrieval"
         ],
-        benefits: "Reduced radiation exposure, immediate results, comprehensive maternal care, and healthy pregnancy outcomes."
+        benefits: "Faster diagnosis, reduced radiation exposure, immediate results, and enhanced image quality for accurate treatment planning."
+      }
+    },
+    {
+      icon: "/images/care.png",
+      title: "Pregnancy & Antenatal Care",
+      description: "Comprehensive pregnancy care including antenatal checkups, monitoring, and postnatal support for mother and baby.",
+      additionalInfo: {
+        features: [
+          "Regular antenatal checkups",
+          "Pregnancy monitoring",
+          "Postnatal care",
+          "Nutritional guidance",
+          "Birth preparation classes"
+        ],
+        benefits: "Healthy pregnancy outcomes, early detection of complications, comprehensive maternal care, and professional support throughout pregnancy."
       }
     },
 
@@ -214,20 +230,7 @@ export default function ServicesPage() {
       }
     },
 
-    {
-      icon: "/images/sexual.png",
-      title: "Sexual Problem Treatment",
-      description: "Confidential and professional treatment for sexual health issues with expert counseling and care.",
-      additionalInfo: {
-        features: [
-          "Confidential consultations",
-          "Professional counseling",
-          "Medical treatment options",
-          "Relationship therapy"
-        ],
-        benefits: "Improved sexual health, enhanced relationships, professional support, and confidential care."
-      }
-    }
+ 
   ];
 
   return (
@@ -238,30 +241,30 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="bg-primary text-white py-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="max-w-2xl">
+          <div className="w-full">
             <p className="text-xl font-semibold mb-4 text-accent">Our Services</p>
            
 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold mb-6 leading-tight">
-  Comprehensive Orthopaedic & Gynecology Care
+  Comprehensive Orthopaedic, Obstetric & Gynecological Care
 </h1>
 
-            <p className="text-lg text-accent-light mb-8 leading-relaxed">
-              From preventive care to advanced treatments, Cortex Hospital offers a full range of orthopaedic and gynecological services to support your health and well-being.
+            <p className="text-lg text-accent-light mb-8 leading-relaxed max-w-2xl">
+              From preventive care to advanced treatments, Cortex Hospital offers a full range of orthopaedic, Obstetric and gynecological services to support your health and well-being.
             </p>
-          <Link href="/contact" passHref>
-  <Button variant="secondary" size="large" asChild>
-    <span className="flex items-center">
-      Make Appointment
-      <Image
-        src="/images/img_arrowright.svg"
-        alt="Arrow"
-        width={24}
-        height={24}
-        className="ml-2"
-      />
-    </span>
-  </Button>
-</Link>
+            <Link href="/contact" passHref>
+              <Button variant="secondary" size="large" asChild>
+                <span className="flex items-center">
+                  Make Appointment
+                  <Image
+                    src="/images/img_arrowright.svg"
+                    alt="Arrow"
+                    width={24}
+                    height={24}
+                    className="ml-2"
+                  />
+                </span>
+              </Button>
+            </Link>
           </div>
         </div>
         
@@ -346,135 +349,69 @@ export default function ServicesPage() {
       
       {/* Featured Service */}
       
-      {/* Pricing Section */}
+      {/* Billing Transparency Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <p className="text-accent font-medium mb-4">Pricing & Charges</p>
+            <p className="text-accent font-medium mb-4">Billing & Transparency</p>
             <h2 className="text-5xl font-semibold text-primary mb-6 leading-tight">
-              Transparent Pricing Structure
+              Complete Transparency in Healthcare
             </h2>
             <p className="text-secondary-dark text-lg max-w-3xl mx-auto">
-              At Cortex Hospital, we believe in transparent pricing. Below are our standard charges for various services and procedures.
+              At Cortex Hospital, we believe in complete transparency. Every treatment, procedure, and service comes with detailed billing documentation.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Basic Services */}
-            <Card className="p-8 hover:shadow-xl transition-all duration-300">
-              <div className="bg-[#0B1F44] p-6 rounded-lg w-20 h-16 mb-6 flex items-center justify-center">
-                <Image src="/images/basic.png" alt="Basic Services" width={32} height={32} className='invert' />
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Basic Services</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Registration Fee</span>
-                  <span className="font-semibold text-gray-900">₹ 400</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Consultation Fee</span>
-                  <span className="font-semibold text-gray-900">₹ 700</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Assistant Doctor Visit</span>
-                  <span className="font-semibold text-gray-900">₹ 500</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Special Visit</span>
-                  <span className="font-semibold text-gray-900">₹ 9,000</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Discharge Charges</span>
-                  <span className="font-semibold text-gray-900">₹ 700 - 1,000</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="text-gray-600">X-ray Services</span>
-                  <span className="font-semibold text-gray-900">₹ 500 - 1,000+</span>
-                </div>
-                
-               
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-gray-600 text-sm">*Charges vary by test type</span>
-                  <Link href="/contact" className="text-accent font-medium text-sm hover:text-[#B8941F] transition-colors">
-                    Contact for details
-                  </Link>
-                </div>
-              </div>
-            </Card>
-
-            {/* Ward & Nursing */}
-            <Card className="p-8 hover:shadow-xl transition-all duration-300">
-              <div className="bg-[#0B1F44] p-6 rounded-lg w-20 h-16 mb-6 flex items-center justify-center">
-                <Image src="/images/nursing.png" alt="Ward Services" width={32} height={32} className='invert' />
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Ward & Nursing</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Daily Admission (Non-AC)</span>
-                  <span className="font-semibold text-gray-900">₹ 2,001</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Daily Admission (AC)</span>
-                  <span className="font-semibold text-gray-900">₹ 2,901</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Nursing Charges (Per Day)</span>
-                  <span className="font-semibold text-gray-900">₹ 800</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Dressing & Injection</span>
-                  <span className="font-semibold text-gray-900">₹ 700</span>
-                </div>
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-gray-600">Multipara Monitor</span>
-                  <span className="font-semibold text-gray-900">₹ 700</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Sonography</span>
-                  <span className="font-semibold text-gray-900">₹ 500 - 1,000+</span>
-                </div>
-              </div>
-            </Card>
-
-            {/* Surgery & Procedures */}
-            <Card className="p-8 hover:shadow-xl transition-all duration-300">
-              <div className="bg-[#0B1F44] p-6 rounded-lg w-20 h-16 mb-6 flex items-center justify-center">
-                <Image src="/images/surgery.png" alt="Surgery Services" width={32} height={32} className='invert' />
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Surgery & Procedures</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Surgery Charges</span>
-                  <span className="font-semibold text-gray-900">₹ 9,000+</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Anesthesia Charges</span>
-                  <span className="font-semibold text-gray-900">₹ 9,000+</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Anesthesia Assistant</span>
-                  <span className="font-semibold text-gray-900">₹ 2,000</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="text-gray-600">Major Surgery Assistant</span>
-                  <span className="font-semibold text-gray-900">₹ 2,000</span>
-                </div>
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-gray-600 text-sm">*Charges vary as per surgery type</span>
-                  <Link href="/contact" className="text-accent font-medium text-sm hover:text-[#B8941F] transition-colors">
-                    Contact for details
-                  </Link>
-                </div>
-              </div>
-            </Card>
-          </div>
+    
 
           <div className="text-center mt-12">
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 max-w-2xl mx-auto">
-              <h4 className="text-lg font-semibold text-blue-900 mb-2">Important Note</h4>
-              <p className="text-blue-800 text-sm">
-                All charges are subject to change without prior notice. For detailed pricing information and package deals, please contact our billing department or visit our hospital.
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 max-w-4xl mx-auto shadow-lg">
+              <div className="flex items-center justify-center mb-6">
+                <div className="bg-blue-100 p-3 rounded-full mr-4">
+                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <h4 className="text-2xl font-bold text-blue-900">Our Commitment to Transparency</h4>
+              </div>
+              <p className="text-blue-800 text-lg leading-relaxed max-w-3xl mx-auto mb-6">
+                Every patient receives a comprehensive, itemized bill for all services rendered. We provide complete transparency in healthcare costs with detailed documentation for insurance claims and personal records.
               </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div className="text-center">
+                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                    <div className="text-3xl font-bold text-blue-600 mb-2">100%</div>
+                    <div className="text-sm text-blue-700">Transparent Billing</div>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                    <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
+                    <div className="text-sm text-blue-700">Billing Support</div>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                    <div className="text-3xl font-bold text-blue-600 mb-2">Zero</div>
+                    <div className="text-sm text-blue-700">Hidden Charges</div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8">
+                <Link href="/contact" passHref>
+                  <Button variant="primary" size="large" asChild>
+                    <span className="flex items-center">
+                      Get Billing Information
+                      <Image
+                        src="/images/img_arrowright.svg"
+                        alt="Arrow"
+                        width={20}
+                        height={20}
+                        className="ml-2"
+                      />
+                    </span>
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
