@@ -16,7 +16,7 @@ export default function ServicesPage() {
 
   const services = [
     {
-      icon: "/images/traumaCare.png",
+      image: "/images/trauma.png",
       title: "Well Equipped Fracture & Trauma Care Unit",
       description: "State-of-the-art emergency trauma care with advanced equipment for immediate fracture treatment and stabilization.",
       additionalInfo: {
@@ -30,7 +30,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/operation.png",
+      image: "/images/operation.png",
       title: "Advanced Operation Theatre Complex",
       description: "Modern operation theatres with laminar air flow systems ensuring sterile environment for all surgical procedures.",
       additionalInfo: {
@@ -44,7 +44,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/ortho.png",
+      image: "/images/joint.png",
       title: "Joint Replacement",
       description: "Comprehensive joint replacement procedures for hips, knees, and shoulders using latest minimally invasive techniques.",
       additionalInfo: {
@@ -58,7 +58,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/limb.png",
+      image: "/images/limb.png",
       title: "Limb Lengthening & Deformity Correction",
       description: "Advanced procedures for limb lengthening and correction of bone deformities using modern surgical techniques.",
       additionalInfo: {
@@ -72,7 +72,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/fractures.png",
+      image: "/images/illi.png",
       title: "Ilizarov Surgery",
       description: "Specialized Ilizarov external fixation techniques for complex fractures and bone reconstruction procedures.",
       additionalInfo: {
@@ -86,7 +86,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/spine.png",
+      image: "/images/spine.png",
       title: "Spine Surgery & Fracture Treatment",
       description: "Comprehensive spinal care including minimally invasive spine surgery and advanced fracture treatment.",
       additionalInfo: {
@@ -100,7 +100,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/pediatrics.png",
+      image: "/images/child.png",
       title: "Pediatric Orthopedic Care",
       description: "Specialized orthopedic care for children including growth-related disorders and congenital conditions.",
       additionalInfo: {
@@ -114,7 +114,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/shoulder.png",
+      image: "/images/arthroscopic.png",
       title: "Arthroscopic Surgery",
       description: "Minimally invasive arthroscopic procedures for joint problems with faster recovery and reduced scarring.",
       additionalInfo: {
@@ -128,7 +128,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/knee.png",
+      image: "/images/arth.png",
       title: "Arthritis & Osteoporosis Management",
       description: "Comprehensive management of arthritis and osteoporosis with medication, therapy, and lifestyle guidance.",
       additionalInfo: {
@@ -142,7 +142,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/xray.png",
+      image: "/images/digitalxray.png",
       title: "Digital X-ray Services",
       description: "Advanced digital imaging technology for accurate diagnosis with reduced radiation exposure and immediate results.",
       additionalInfo: {
@@ -157,7 +157,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/care.png",
+      image: "/images/antena.png",
       title: "Pregnancy & Antenatal Care",
       description: "Comprehensive pregnancy care including antenatal checkups, monitoring, and postnatal support for mother and baby.",
       additionalInfo: {
@@ -173,7 +173,7 @@ export default function ServicesPage() {
     },
 
     {
-      icon: "/images/surgery.png",
+      image: "/images/baby.png",
       title: "Cesarean & Surgical Procedures",
       description: "Expert cesarean delivery and gynecological surgical procedures with advanced surgical techniques.",
       additionalInfo: {
@@ -187,7 +187,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/infertility.png",
+      image: "/images/infertile.png",
       title: "Infertility Prevention & Treatment",
       description: "Comprehensive fertility services including diagnosis, treatment, and counseling for reproductive health.",
       additionalInfo: {
@@ -202,7 +202,7 @@ export default function ServicesPage() {
     },
   
     {
-      icon: "/images/vagina.png",
+      image: "/images/uterine.png",
       title: "Uterine Fibroid Surgery",
       description: "Advanced surgical treatment for uterine fibroids including minimally invasive laparoscopic procedures.",
       additionalInfo: {
@@ -216,7 +216,7 @@ export default function ServicesPage() {
       }
     },
     {
-      icon: "/images/sonography.png",
+      image: "/images/sonography.png",
       title: "Sonography Center",
       description: "State-of-the-art ultrasound imaging for accurate diagnosis and monitoring of various conditions.",
       additionalInfo: {
@@ -228,7 +228,7 @@ export default function ServicesPage() {
         ],
         benefits: "Accurate diagnosis, non-invasive imaging, real-time results, and comprehensive monitoring."
       }
-    },
+    }
 
  
   ];
@@ -295,8 +295,14 @@ export default function ServicesPage() {
               <Card key={index} className={`p-8 hover:shadow-xl transition-all duration-300 ${
                 expandedCard === index ? 'md:col-span-3 lg:col-span-3' : ''
               }`}>
-                <div className="bg-[#0B1F44] p-6 rounded-lg w-20 h-20 mb-6 flex items-center justify-center">
-                  <Image src={service.icon} alt={service.title} width={52} height={52} className='invert' />
+                <div className="w-full h-48 mb-6 rounded-lg overflow-hidden">
+                  <Image 
+                    src={service.image} 
+                    alt={service.title} 
+                    width={400} 
+                    height={192} 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">{service.title}</h3>
                 <p className="text-gray-500 leading-relaxed mb-6">

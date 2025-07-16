@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import { preloadCriticalResources, optimizeWebVitals, optimizeScrollPerformance } from '../utils/performance';
 import '../styles/index.css';
 
 // Metadata is moved to a separate constant since we're using 'use client'
@@ -34,6 +35,23 @@ export default function RootLayout({ children }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
+  // Performance optimizations
+  useEffect(() => {
+    // Only run on client side
+    if (typeof window !== 'undefined') {
+      preloadCriticalResources();
+      optimizeWebVitals();
+      const cleanupScroll = optimizeScrollPerformance();
+      
+      // Cleanup function
+      return () => {
+        if (cleanupScroll) {
+          cleanupScroll();
+        }
+      };
+    }
+  }, []);
 
   return (
     <html lang="en">
