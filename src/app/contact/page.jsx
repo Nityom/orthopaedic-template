@@ -6,6 +6,9 @@ import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import ScrollToTop from '@/components/ui/ScrollToTop';
 import Image from 'next/image';
+import LazyImage from '@/components/ui/LazyImage';
+import LazyIcon from '@/components/ui/LazyIcon';
+import LazyMap from '@/components/ui/LazyMap';
 import ContactForm from '@/components/common/ContactForm';
 
 export default function ContactPage() {
@@ -50,12 +53,12 @@ export default function ContactPage() {
               <div className="space-y-8 mb-12">
                 <div className="flex items-start gap-6">
                   <div className="bg-primary p-4 rounded-lg">
-                    <Image 
+                    <LazyIcon 
                       src="/images/img_mappin.svg" 
                       alt="Location"
-                      width={24}
-                      height={24}
+                      size={24}
                       className="invert"
+                      priority={true}
                     />
                   </div>
                   <div>
@@ -70,12 +73,12 @@ export default function ContactPage() {
                 
                 <div className="flex items-start gap-6">
                   <div className="bg-primary p-4 rounded-lg">
-                    <Image 
+                    <LazyIcon 
                       src="/images/img_phone.svg" 
                       alt="Phone" 
-                      width={24} 
-                      height={24}
-                      className="invert" 
+                      size={24}
+                      className="invert"
+                      priority={true}
                     />
                   </div>
                   <div>
@@ -91,12 +94,12 @@ export default function ContactPage() {
                 
                 <div className="flex items-start gap-6">
                   <div className="bg-primary p-4 rounded-lg">
-                    <Image 
+                    <LazyIcon 
                       src="/images/img_mail.svg" 
                       alt="Email" 
-                      width={24} 
-                      height={24}
-                      className="invert" 
+                      size={24}
+                      className="invert"
+                      priority={true}
                     />
                   </div>
                   <div>
@@ -112,14 +115,14 @@ export default function ContactPage() {
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Follow Us</h3>
                 <div className="flex gap-4">
-                  <div className="bg-gray-200 p-3 rounded-lg hover:bg-[#0B1F44] hover:text-white transition-colors cursor-pointer">
-                    <Image src="/images/img_facebook.svg" alt="Facebook" width={24} height={24} />
+                  <div className="bg-gray-200 p-3 rounded-lg hover:bg-[#0B1F44] hover:text-white transition-colors cursor-pointer will-change-transform">
+                    <LazyIcon src="/images/img_facebook.svg" alt="Facebook" size={24} />
                   </div>
-                  <div className="bg-gray-200 p-3 rounded-lg hover:bg-[#0B1F44] hover:text-white transition-colors cursor-pointer">
-                    <Image src="/images/img_twitter.svg" alt="Twitter" width={24} height={24} />
+                  <div className="bg-gray-200 p-3 rounded-lg hover:bg-[#0B1F44] hover:text-white transition-colors cursor-pointer will-change-transform">
+                    <LazyIcon src="/images/img_twitter.svg" alt="Twitter" size={24} />
                   </div>
-                  <div className="bg-gray-200 p-3 rounded-lg hover:bg-[#0B1F44] hover:text-white transition-colors cursor-pointer">
-                    <Image src="/images/img_linkedin.svg" alt="LinkedIn" width={24} height={24} />
+                  <div className="bg-gray-200 p-3 rounded-lg hover:bg-[#0B1F44] hover:text-white transition-colors cursor-pointer will-change-transform">
+                    <LazyIcon src="/images/img_linkedin.svg" alt="LinkedIn" size={24} />
                   </div>
                 </div>
               </div>
@@ -192,19 +195,11 @@ export default function ContactPage() {
           </div>
           
           <div className="bg-gray-200 rounded-lg h-96 relative">
-            {/* Map placeholder */}
-         <div className="overflow-hidden rounded-lg h-96 w-full">
-  <iframe
-    src="https://www.google.com/maps?q=Cortex+Hospital,+PJX4%2BJ2Q,+Nagpur+Rd,+Sudampuri,+Wardha,+Maharashtra+442001&output=embed"
-    width="100%"
-    height="100%"
-    style={{ border: 0 }}
-    allowFullScreen=""
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  ></iframe>
-</div>
-
+            {/* Map with lazy loading */}
+            <LazyMap
+              src="https://www.google.com/maps?q=Cortex+Hospital,+PJX4%2BJ2Q,+Nagpur+Rd,+Sudampuri,+Wardha,+Maharashtra+442001&output=embed"
+              className="overflow-hidden rounded-lg h-96 w-full"
+            />
           </div>
           
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
