@@ -215,7 +215,7 @@ export default function HomePage() {
               <div className="bg-[#D4AF37] p-6 rounded-lg w-24 h-24 mx-auto mb-6 flex items-center justify-center">
                 <Image src="/images/appointment.png" alt="Schedule appointment" width={44} height={44}  />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Schedule Consultation</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Book your Appointment</h3>
               <p className="text-gray-500 leading-relaxed">
                 Book your appointment with our orthopaedic or gynecology specialists for comprehensive evaluation.
               </p>

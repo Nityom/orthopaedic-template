@@ -72,7 +72,7 @@ const HeroSection = () => {
             <motion.div variants={itemVariants}>
               <Link href="/contact">
                 <Button variant="secondary" size="large">
-                  Schedule Consultation
+                 Book Your Appointment
                   <Image src="/images/img_arrowright.svg" alt="Arrow" width={24} height={24} className="ml-2" />
                 </Button>
               </Link>
