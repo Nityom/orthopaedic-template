@@ -168,21 +168,21 @@ export default function HomePage() {
                 <Image src="/images/img_icon.svg" alt="Quote icon" width={67} height={84} />
               </div>
              <p className="text-[#D4AF37] text-lg mb-8 leading-relaxed">
-  "Honestly, I thought my sports days were over after my ACL injury. But the orthopaedic team at Cortex Hospital was amazing! They got me back on the field stronger than ever. The whole experience was smooth and the recovery was way faster than I expected. Totally recommend!"
+  "After a major shoulder injury, I had lost hope of regaining full movement. The orthopaedic specialists at Cortex Hospital not only treated my condition with utmost care but also guided me through a smooth recovery process. Today, I’m back to my active lifestyle. Thank you for the outstanding treatment"
 </p>
               <div className="flex items-center gap-4">
                 
                              <div className="flex items-center gap-4">
                 <div className="w-20 h-20 bg-gray-900 rounded-full relative overflow-hidden">
                   <Image 
-                    src="/images/patientImage.jpeg" 
+                    src="/images/patientImage.jpg" 
                     alt="Nityom Tikhe - Patient" 
                     fill
                     className="object-cover w-full h-full"
                   />
                 </div>
                 <div>
-                  <h4 className="text-2xl font-semibold text-[#D4AF37]">Nityom Tikhe</h4>
+                  <h4 className="text-2xl font-semibold text-[#D4AF37]">Rajesh Sharma</h4>
                   <p className="text-[#D4AF37]">Patient</p>
                 </div>
               </div>
