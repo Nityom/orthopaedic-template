@@ -182,7 +182,7 @@ export default function HomePage() {
                   />
                 </div>
                 <div>
-                  <h4 className="text-2xl font-semibold text-[#D4AF37]">Ulhas Khadataker</h4>
+                  <h4 className="text-2xl font-semibold text-[#D4AF37]">Ulhas Khadatkar</h4>
                   <p className="text-[#D4AF37]">Patient</p>
                 </div>
               </div>
