@@ -112,9 +112,9 @@ export default function TermsPage() {
             </p>
             <div className="bg-gray-50 p-6 rounded-lg mb-6">
               <p className="text-gray-700 mb-2"><strong>Cortex Hospital</strong></p>
-              <p className="text-gray-700 mb-2">123 Medical Plaza, Healthcare District</p>
-              <p className="text-gray-700 mb-2">City 12345, United States</p>
-              <p className="text-gray-700 mb-2">Phone: +1 (555) 123-4567</p>
+              <p className="text-gray-700 mb-2">Beside Urich Mall</p>
+              <p className="text-gray-700 mb-2">Aarti Square,Mohini Nagar, Nagpur Road</p>
+              <p className="text-gray-700 mb-2">Wardha(M.S)-442001</p>
               <p className="text-gray-700">Email: drvipeenraut@cortexhospital.com</p>
             </div>
 
