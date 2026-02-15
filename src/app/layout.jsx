@@ -65,6 +65,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>{siteMetadata.title}</title>
+        <meta name="google-adsense-account" content="ca-pub-2118846061564540">
         <meta name="description" content={siteMetadata.description} />
         <meta name="keywords" content={siteMetadata.keywords} />
         <meta name="author" content={siteMetadata.author} />
