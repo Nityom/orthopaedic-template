@@ -13,81 +13,81 @@ export default function AboutPage() {
     <div className="min-h-screen bg-white">
       <Header />
       <ScrollToTop />
-        {/* Hero Section */}
+      {/* Hero Section */}
       <section className="bg-primary text-white py-12 md:py-16 lg:py-20 relative overflow-hidden">
-  <div className="max-w-7xl mx-auto px-4 relative z-10">
-    <motion.div 
-      className="w-full"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
-      <motion.p 
-        className="text-lg md:text-xl font-semibold mb-3 md:mb-4"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
-      >
-        About Us
-      </motion.p>
-      <motion.h1 
-        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold mb-4 md:mb-6 leading-tight"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4, duration: 0.6 }}
-      >
-        Cortex Hospital: Excellence in Orthopaedic, Obstetric & Gynecological Care
-      </motion.h1>
-      <motion.p 
-        className="text-base md:text-lg text-gray-300 mb-6 md:mb-8 leading-relaxed max-w-2xl"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6, duration: 0.6 }}
-      >
-        With over 15 years of experience, Cortex Hospital has been delivering exceptional orthopaedic, Obstetric and gynecological care, helping patients achieve optimal health and quality of life.
-      </motion.p>
-    </motion.div>
-  </div>
-  
-  {/* Decorative Elements */}
-  <motion.div 
-    className="hidden md:block absolute top-0 right-0 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-white opacity-10"
-    initial={{ x: 100, opacity: 0 }}
-    animate={{ x: 0, opacity: 0.1 }}
-    transition={{ duration: 0.8 }}
-  ></motion.div>
-  <motion.div 
-    className="hidden md:block absolute top-16 md:top-24 lg:top-32 right-16 md:right-24 lg:right-32 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-white opacity-5"
-    initial={{ x: 100, opacity: 0 }}
-    animate={{ x: 0, opacity: 0.05 }}
-    transition={{ duration: 0.8, delay: 0.2 }}
-  ></motion.div>
-  <motion.div 
-    className="hidden md:block absolute top-32 md:top-48 lg:top-64 right-0 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-white opacity-20"
-    initial={{ x: 100, opacity: 0 }}
-    animate={{ x: 0, opacity: 0.2 }}
-    transition={{ duration: 0.8, delay: 0.4 }}
-  ></motion.div>
-  <motion.div 
-    className="absolute bottom-0 right-0 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-primary-light"
-    initial={{ y: 100, opacity: 0 }}
-    animate={{ y: 0, opacity: 1 }}
-    transition={{ duration: 0.8 }}
-  ></motion.div>
-  <motion.div 
-    className="absolute bottom-0 right-16 md:right-24 lg:right-32 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-accent"
-    initial={{ y: 100, opacity: 0 }}
-    animate={{ y: 0, opacity: 1 }}
-    transition={{ duration: 0.8, delay: 0.2 }}
-  ></motion.div>
-  <motion.div 
-    className="absolute bottom-16 md:bottom-24 lg:bottom-32 right-0 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-accent-dark"
-    initial={{ y: 100, opacity: 0 }}
-    animate={{ y: 0, opacity: 1 }}
-    transition={{ duration: 0.8, delay: 0.4 }}
-  ></motion.div>
-</section>
-      
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <motion.div
+            className="w-full"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.p
+              className="text-lg md:text-xl font-semibold mb-3 md:mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            >
+              About Us
+            </motion.p>
+            <motion.h1
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold mb-4 md:mb-6 leading-tight"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+            >
+              Cortex Hospital: Excellence in Orthopaedic, Obstetric & Gynecological Care
+            </motion.h1>
+            <motion.p
+              className="text-base md:text-lg text-gray-300 mb-6 md:mb-8 leading-relaxed max-w-2xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+            >
+              With over 15 years of experience, Cortex Hospital has been delivering exceptional orthopaedic, Obstetric and gynecological care, helping patients achieve optimal health and quality of life.
+            </motion.p>
+          </motion.div>
+        </div>
+
+        {/* Decorative Elements */}
+        <motion.div
+          className="hidden md:block absolute top-0 right-0 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-white opacity-10"
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 0.1 }}
+          transition={{ duration: 0.8 }}
+        ></motion.div>
+        <motion.div
+          className="hidden md:block absolute top-16 md:top-24 lg:top-32 right-16 md:right-24 lg:right-32 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-white opacity-5"
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 0.05 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        ></motion.div>
+        <motion.div
+          className="hidden md:block absolute top-32 md:top-48 lg:top-64 right-0 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-white opacity-20"
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        ></motion.div>
+        <motion.div
+          className="absolute bottom-0 right-0 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-primary-light"
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        ></motion.div>
+        <motion.div
+          className="absolute bottom-0 right-16 md:right-24 lg:right-32 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-accent"
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        ></motion.div>
+        <motion.div
+          className="absolute bottom-16 md:bottom-24 lg:bottom-32 right-0 w-16 md:w-24 lg:w-32 h-16 md:h-24 lg:h-32 bg-accent-dark"
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        ></motion.div>
+      </section>
+
       {/* Our Story Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
@@ -109,9 +109,9 @@ export default function AboutPage() {
             </div>
             <div className="relative order-1 lg:order-2 mb-8 lg:mb-0">
               <div className="bg-gray-900 rounded-lg h-64 sm:h-80 lg:h-96 relative overflow-hidden">
-                <Image 
-                  src="/images/hospitalImage1.jpg" 
-                  alt="Cortex Hospital - Our Story" 
+                <Image
+                  src="/images/hospitalImage1.jpg"
+                  alt="Cortex Hospital - Our Story"
                   fill
                   className="object-cover w-full h-full"
                 />
@@ -120,7 +120,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      
+
       {/* Our Values Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
@@ -129,12 +129,12 @@ export default function AboutPage() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 mb-4 md:mb-6 leading-tight">
               What Makes Us Different
             </h2>
-           <p className="text-gray-500 text-base md:text-lg max-w-3xl mx-auto">
-  At Cortex Hospital, our core values shape every aspect of our orthopaedic and gynecological care. They guide how we treat each patient, support our community, and collaborate as a team to ensure excellence and compassion.
-</p>
+            <p className="text-gray-500 text-base md:text-lg max-w-3xl mx-auto">
+              At Cortex Hospital, our core values shape every aspect of our orthopaedic and gynecological care. They guide how we treat each patient, support our community, and collaborate as a team to ensure excellence and compassion.
+            </p>
 
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <Card className="text-center p-6 md:p-8">
               <div className="bg-primary p-4 md:p-6 rounded-lg w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 flex items-center justify-center">
@@ -145,7 +145,7 @@ export default function AboutPage() {
                 We maintain the highest standards in orthopaedic and gynecological care through advanced technology and evidence-based treatments.
               </p>
             </Card>
-              <Card className="text-center p-6 md:p-8">
+            <Card className="text-center p-6 md:p-8">
               <div className="bg-primary p-4 md:p-6 rounded-lg w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 flex items-center justify-center">
                 <Image src="/images/img_users.svg" alt="Patient-centered care" width={30} height={30} />
               </div>
@@ -154,7 +154,7 @@ export default function AboutPage() {
                 We develop personalized treatment plans that consider each patient's unique needs, lifestyle, and health goals.
               </p>
             </Card>
-            
+
             <Card className="text-center p-6 md:p-8">
               <div className="bg-primary p-4 md:p-6 rounded-lg w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 flex items-center justify-center">
                 <Image src="/images/img_icon.svg" alt="Integrity" width={30} height={30} />
@@ -167,7 +167,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-        {/* Our Team Section */}
+      {/* Our Team Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-primary">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-8 md:mb-12 lg:mb-16">
@@ -183,16 +183,16 @@ export default function AboutPage() {
           <div className="flex justify-center">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 max-w-6xl w-full">
               {[
-                { 
-                  name: "Dr. vipeen Raut", 
-                  specialty: "Orthopaedic Surgeon", 
+                {
+                  name: "Dr. Vipeen Raut",
+                  specialty: "Orthopaedic Surgeon",
                   image: "/images/doctor1.jpg",
                   facebook: "https://www.facebook.com/vipeen.raut/",
                   instagram: "https://www.instagram.com/vipeen_ortho?igsh=Z21vdXpmd3lscDU2"
                 },
-                { 
-                  name: "Dr. Shillpa Raut", 
-                  specialty: "Gynecologist & Obstetrician", 
+                {
+                  name: "Dr. Shillpa Raut",
+                  specialty: "Gynecologist & Obstetrician",
                   image: "/images/doctor2.jpg",
                   facebook: "https://www.facebook.com/shillparaut9/",
                   instagram: "https://www.instagram.com/shillparaut"
@@ -201,9 +201,9 @@ export default function AboutPage() {
                 <Card key={index} className="bg-white rounded-lg overflow-hidden w-[40]">
                   <div className="bg-gray-900 h-56 sm:h-64 md:h-80 relative">
                     {doctor.image ? (
-                      <Image 
-                        src={doctor.image} 
-                        alt={doctor.name} 
+                      <Image
+                        src={doctor.image}
+                        alt={doctor.name}
                         fill
                         className="object-cover w-full h-full"
                       />
@@ -217,17 +217,17 @@ export default function AboutPage() {
                     <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2 sm:mb-3">{doctor.name}</h3>
                     <p className="text-accent text-base sm:text-lg mb-4 sm:mb-6">{doctor.specialty}</p>
                     <div className="flex gap-3">
-                      <a 
-                        href={doctor.facebook} 
-                        target="_blank" 
+                      <a
+                        href={doctor.facebook}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="bg-accent p-2 sm:p-3 rounded-lg hover:bg-accent-dark transition-colors"
                       >
                         <Image src="/images/img_facebook.svg" alt="Facebook" width={20} height={20} />
                       </a>
-                      <a 
-                        href={doctor.instagram} 
-                        target="_blank" 
+                      <a
+                        href={doctor.instagram}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="bg-accent p-2 sm:p-3 rounded-lg hover:bg-accent-dark transition-colors"
                       >
@@ -241,7 +241,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-        {/* Facility Section */}
+      {/* Facility Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-8 md:mb-12 lg:mb-16">
@@ -253,36 +253,36 @@ export default function AboutPage() {
               Our modern facility is equipped with advanced diagnostic and treatment technology to provide comprehensive orthopaedic and gynecological care in a comfortable, welcoming environment.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <div className="bg-gray-900 rounded-lg h-58 sm:h-56 md:h-64 relative overflow-hidden">
-              <Image 
-                src="/images/hospitalImage.jpg" 
-                alt="Reception Area" 
+              <Image
+                src="/images/hospitalImage.jpg"
+                alt="Reception Area"
                 fill
                 className="object-cover w-full h-full"
               />
             </div>
             <div className="bg-gray-900 rounded-lg h-48 sm:h-56 md:h-64 relative">
               {/* Facility image placeholder */}
-                <Image 
-                src="/images/hospitalImage1.jpg" 
-                alt="Reception Area" 
+              <Image
+                src="/images/hospitalImage1.jpg"
+                alt="Reception Area"
                 fill
                 className="object-cover w-full h-full"
               />
             </div>
             <div className="bg-gray-900 rounded-lg h-48 sm:h-56 md:h-64 relative sm:col-span-2 lg:col-span-1">
               {/* Facility image placeholder */}
-             <Image 
-                src="/images/hospitalImage2.png" 
-                alt="Reception Area" 
+              <Image
+                src="/images/hospitalImage2.png"
+                alt="Reception Area"
                 fill
                 className="object-cover w-full h-full"
               />
             </div>
           </div>
-          
+
           <div className="text-center mt-8 md:mt-12">
             <Button variant="primary" size="large" className="w-full sm:w-auto">
               Contact Us
@@ -290,7 +290,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-        {/* Testimonials Section */}
+      {/* Testimonials Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-8 md:mb-12 lg:mb-16">
@@ -299,7 +299,7 @@ export default function AboutPage() {
               What Our Patients Say
             </h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
               {
@@ -309,7 +309,7 @@ export default function AboutPage() {
                 image: "/images/patient1.png"
               },
               {
-                review :"I went to the gynecology department at Cortex Hospital for a check-up, and Dr. Shillpa Raut and her team were really kind and supportive. They made me feel comfortable and took my concerns seriously",
+                review: "I went to the gynecology department at Cortex Hospital for a check-up, and Dr. Shillpa Raut and her team were really kind and supportive. They made me feel comfortable and took my concerns seriously",
                 name: "Priya Patel",
                 title: "Gynac Patient",
                 image: "/images/patient3.png"
@@ -330,9 +330,9 @@ export default function AboutPage() {
                 </p>
                 <div className="flex items-center gap-3 md:gap-4">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-gray-300 rounded-full relative overflow-hidden">
-                    <Image 
-                      src={testimonial.image} 
-                      alt={testimonial.name} 
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.name}
                       fill
                       className="object-cover w-full h-full"
                     />
@@ -347,7 +347,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      
+
       <Footer />
     </div>
   );

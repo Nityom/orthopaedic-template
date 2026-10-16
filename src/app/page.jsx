@@ -240,9 +240,11 @@ export default function HomePage() {
             </div>
           </div>
           <div className="text-center">
-            <Button variant="primary" size="large">
-              Make Appointment
-            </Button>
+            <Link href="/contact#appointment">
+              <Button variant="primary" size="large">
+                Make Appointment
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

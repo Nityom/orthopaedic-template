@@ -12,6 +12,9 @@ export default function ContactForm() {
     date: '',
     time: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const doctorProblems = {
     'dr-vipeen-raut': [
@@ -69,13 +72,16 @@ export default function ContactForm() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
+    setIsSubmitting(true);
+    setSuccessMessage('');
+    setErrorMessage('');
+
     // Get doctor name
     let doctorDisplayName = selectedDoctor;
     if (selectedDoctor === 'dr-vipeen-raut') {
-      doctorDisplayName = 'Dr. vipeen Raut - Orthopaedic Surgeon';
+      doctorDisplayName = 'Dr. Vipeen Raut - Orthopaedic Surgeon';
     } else if (selectedDoctor === 'dr-shillpa-raut') {
       doctorDisplayName = 'Dr. Shillpa Raut - Gynecologist & Obstetrician';
     }
@@ -91,8 +97,31 @@ export default function ContactForm() {
       }
     }
 
-    // Create the message using the same format as reference
-    const message = `New Appointment Request - Cortex Hospital
+    try {
+      // 1. Submit appointment to Cortex-Admin (Convex backend)
+      const res = await fetch('/api/appointments', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          phone: formData.phone,
+          doctor: selectedDoctor,
+          problem: problemDisplayName,
+          date: formData.date,
+          time: formData.time,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || 'Failed to book appointment. Please try again.');
+      }
+
+      setSuccessMessage('Appointment booked successfully! It has been registered in the hospital system.');
+
+      // 2. Open WhatsApp for instant confirmation
+      const message = `New Appointment Request - Cortex Hospital
 Name: ${formData.fullName || 'Not provided'}
 Phone: ${formData.phone || 'Not provided'}
 Doctor: ${doctorDisplayName || 'Not selected'}
@@ -103,33 +132,50 @@ Time: ${formData.time || 'Not selected'}
 Hospital: Cortex Hospital, Wardha
 Please confirm this appointment. Thank you!`;
 
-    console.log('WhatsApp Message:', message);
-    
-    // Try opening WhatsApp with simple message (same as reference)
-    const phoneNumber = "919373280505";
-    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
-    
-    console.log('WhatsApp URL:', whatsappURL);
-    
-    // Try both methods (same as reference)
-    window.open(whatsappURL, '_blank');
-    
-    // Alternative method
-    setTimeout(() => {
-      const altURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-      console.log('Alternative URL:', altURL);
-      window.open(altURL, '_blank');
-    }, 1000);
+      const phoneNumber = "919373280505";
+      const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+      window.open(whatsappURL, '_blank');
 
-    // Show fallback message to user after a delay
-    setTimeout(() => {
-      alert("If the message didn't appear automatically, please type your appointment confirmation manually in WhatsApp.");
-    }, 3000);
+      // Reset form
+      setFormData({
+        fullName: '',
+        phone: '',
+        date: '',
+        time: ''
+      });
+      setSelectedDoctor('');
+      setSelectedProblem('');
+    } catch (err) {
+      console.error('Booking error:', err);
+      setErrorMessage(err.message || 'Something went wrong while booking. Please try again or call us.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <Card className="p-8">
       <h3 className="text-2xl font-semibold text-primary mb-6">Book an Appointment</h3>
+
+      {successMessage && (
+        <div className="mb-6 p-4 rounded-lg bg-green-50 border border-green-200 text-green-800 text-sm">
+          <p className="font-semibold flex items-center gap-1.5">
+            <span>✓</span> {successMessage}
+          </p>
+          <p className="mt-1 text-xs text-green-700">
+            A confirmation chat has also been opened in WhatsApp. Our team will contact you shortly.
+          </p>
+        </div>
+      )}
+
+      {errorMessage && (
+        <div className="mb-6 p-4 rounded-lg bg-red-50 border border-red-200 text-red-800 text-sm">
+          <p className="font-semibold flex items-center gap-1.5">
+            <span>⚠</span> {errorMessage}
+          </p>
+        </div>
+      )}
+
       <form onSubmit={handleSubmit}>
         <div className="mb-6">
           <label htmlFor="fullName" className="block text-sm font-medium text-primary mb-2">
@@ -175,8 +221,8 @@ Please confirm this appointment. Thank you!`;
             required
           >
             <option value="">Choose a doctor</option>
-            <option value="dr-vipeen-raut">Dr. vipeen Raut - Orthopaedic Surgeon</option>
-            <option value="dr-shillpa-raut">Dr. Shillpa Raut - Gynecologist & Obstetrician</option>
+            <option value="dr-vipeen-raut">Dr. Vipeen Raut - Orthopaedic Surgeon</option>
+            <option value="dr-shillpa-raut">Dr. Shillpa Raut - Gynecologist &amp; Obstetrician</option>
           </select>
         </div>
         
@@ -286,8 +332,20 @@ Please confirm this appointment. Thank you!`;
           </div>
         </div>
         
-        <Button variant="primary" type="submit" className="w-full">
-          Book Appointment
+        <Button 
+          variant="primary" 
+          type="submit" 
+          className="w-full flex items-center justify-center gap-2"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? (
+            <>
+              <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+              Booking Appointment...
+            </>
+          ) : (
+            'Book Appointment'
+          )}
         </Button>
       </form>
     </Card>
